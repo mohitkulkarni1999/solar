@@ -125,53 +125,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="relative bg-gradient-to-br from-solar-sky-600 via-solar-sky-500 to-solar-green-500 py-20 overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-solar-green-400/20 rounded-full blur-3xl"></div>
-        
-        <div className="container-custom relative z-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Stat 1 */}
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Users className="text-white" size={36} />
-              </div>
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">5000<span className="text-3xl">+</span></div>
-              <div className="text-white/90 font-medium text-sm md:text-base">Happy Customers</div>
-            </div>
-            
-            {/* Stat 2 */}
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Sun className="text-white" size={36} />
-              </div>
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">15<span className="text-3xl">MW</span></div>
-              <div className="text-white/90 font-medium text-sm md:text-base">Energy Generated</div>
-            </div>
-            
-            {/* Stat 3 */}
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Award className="text-white" size={36} />
-              </div>
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">50<span className="text-3xl">+</span></div>
-              <div className="text-white/90 font-medium text-sm md:text-base">Industry Awards</div>
-            </div>
-            
-            {/* Stat 4 */}
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                <TrendingUp className="text-white" size={36} />
-              </div>
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">70<span className="text-3xl">%</span></div>
-              <div className="text-white/90 font-medium text-sm md:text-base">Average Savings</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section className="bg-white section-padding relative overflow-hidden">
         {/* Decorative Background */}
