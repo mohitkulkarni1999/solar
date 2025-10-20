@@ -22,15 +22,15 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '+1 (234) 567-890',
-      link: 'tel:+1234567890',
+      details: '7972574730',
+      link: 'tel:7972574730',
       color: 'sky'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'info@solarise.com',
-      link: 'mailto:info@solarise.com',
+      details: 'info.solarisecorp@gmail.com',
+      link: 'mailto:info.solarisecorp@gmail.com',
       color: 'green'
     },
     {
@@ -201,23 +201,23 @@ const Contact = () => {
               
               {/* Quick Contact Bubbles */}
               <div className="flex flex-wrap gap-4">
-                <a href="tel:+1234567890" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
+                <a href="tel:7972574730" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone className="text-white" size={20} />
                   </div>
                   <div>
                     <div className="text-xs text-white/70">Call Us</div>
-                    <div className="font-semibold">+1 (234) 567-890</div>
+                    <div className="font-semibold">7972574730</div>
                   </div>
                 </a>
                 
-                <a href="mailto:info@solarise.com" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
+                <a href="mailto:info.solarisecorp@gmail.com" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="text-white" size={20} />
                   </div>
                   <div>
                     <div className="text-xs text-white/70">Email Us</div>
-                    <div className="font-semibold">info@solarise.com</div>
+                    <div className="font-semibold">info.solarisecorp@gmail.com</div>
                   </div>
                 </a>
               </div>
@@ -358,7 +358,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         className={`w-full px-4 py-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all`}
-                        placeholder="+1 (234) 567-890"
+                        placeholder="7972574730"
                       />
                       {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                     </div>
@@ -432,7 +432,7 @@ const Contact = () => {
                 <p className="text-gray-600 mb-6">
                   Prefer to discuss in person? Visit our office during business hours or schedule an appointment.
                 </p>
-                <Button variant="primary" icon={Phone} href="tel:+1234567890" fullWidth>
+                <Button variant="primary" icon={Phone} href="tel:7972574730" fullWidth>
                   Call to Schedule
                 </Button>
               </Card>
@@ -451,8 +451,8 @@ const Contact = () => {
           <p className="text-xl mb-8 text-solar-sky-50 max-w-2xl mx-auto">
             Call us now and speak directly with our solar experts.
           </p>
-          <Button variant="white" icon={Phone} href="tel:+1234567890" size="lg">
-            Call: +1 (234) 567-890
+          <Button variant="white" icon={Phone} href="tel:7972574730" size="lg">
+            Call: 7972574730
           </Button>
         </div>
       </section>

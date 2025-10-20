@@ -366,8 +366,8 @@ const Home = () => {
             <Button variant="white" icon={ArrowRight} to="/contact">
               Request Free Quote
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10" icon={Phone} href="tel:+1234567890">
-              Call: +1 (234) 567-890
+            <Button variant="outline" className="border-white text-white hover:bg-white/10" icon={Phone} href="tel:7972574730">
+              Call: 7972574730
             </Button>
           </div>
         </div>
@@ -449,7 +449,7 @@ const Home = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all`}
-                      placeholder="+1 (234) 567-890"
+                      placeholder="7972574730"
                     />
                     {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                   </div>
@@ -518,14 +518,14 @@ const Home = () => {
                 <Card variant="glass" hover={false}>
                   <div className="relative w-full h-[400px] lg:h-[600px] rounded-xl overflow-hidden">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.494!2d77.315945!3d19.159552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd1d644999261a9%3A0x821ffa3dea3de43b!2sHingoli%20Gate%2C%20Nanded%2C%20Maharashtra%20431601!5e0!3m2!1sen!2sin!4v1729430000000!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.4845!2d77.317181!3d19.1594484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd1d700606a59fd%3A0xa777cb8656f212fd!2sSolarise%20Corp.!5e0!3m2!1sen!2sin!4v1729430000000!5m2!1sen!2sin"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
                       allowFullScreen=""
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Office Location - Hingoli Gate, Nanded"
+                      title="Office Location - Solarise Corp., Nanded"
                       className="absolute inset-0"
                     ></iframe>
                   </div>

@@ -23,8 +23,8 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: Phone, text: '+1 (234) 567-890', href: 'tel:+1234567890' },
-    { icon: Mail, text: 'info@solarise.com', href: 'mailto:info@solarise.com' },
+    { icon: Phone, text: '7972574730', href: 'tel:7972574730' },
+    { icon: Mail, text: 'info.solarisecorp@gmail.com', href: 'mailto:info.solarisecorp@gmail.com' },
     { icon: MapPin, text: 'Studio 4, Nandi Building, Beside Mangnani Function Hall, Venkatesh Nagar, Hingoli Gate, Nanded – 431602, Maharashtra' },
   ];
 

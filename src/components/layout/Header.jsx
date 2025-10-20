@@ -32,13 +32,13 @@ const Header = () => {
         <div className="container-custom">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center gap-6">
-              <a href="mailto:info@solarise.com" className="flex items-center gap-2 hover:text-solar-sky-100 transition">
+              <a href="mailto:info.solarisecorp@gmail.com" className="flex items-center gap-2 hover:text-solar-sky-100 transition">
                 <Mail size={16} />
-                <span>info@solarise.com</span>
+                <span>info.solarisecorp@gmail.com</span>
               </a>
-              <a href="tel:+1234567890" className="flex items-center gap-2 hover:text-solar-sky-100 transition">
+              <a href="tel:7972574730" className="flex items-center gap-2 hover:text-solar-sky-100 transition">
                 <Phone size={16} />
-                <span>+1 (234) 567-890</span>
+                <span>7972574730</span>
               </a>
             </div>
             <div className="text-solar-sky-100">
