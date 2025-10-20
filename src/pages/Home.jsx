@@ -384,7 +384,7 @@ const Home = () => {
               Ready to transform your energy future? Reach out to us today and let's discuss how solar can work for you
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Contact Form - Left Side */}
             <div>
               <SectionTitle 
@@ -503,20 +503,8 @@ const Home = () => {
             {/* Map - Right Side */}
             <div>
               <div className="sticky top-8">
-                <div className="mb-6">
-                  <div className="inline-flex items-center gap-3 bg-gradient-to-r from-solar-sky-50 to-solar-green-50 px-6 py-4 rounded-2xl w-full">
-                    <MapPin className="text-solar-sky-600 flex-shrink-0" size={24} />
-                    <div className="text-left">
-                      <p className="text-sm text-gray-600 font-medium">Our Office Location</p>
-                      <p className="text-gray-900 font-semibold text-sm">
-                        Studio 4, Nandi Building, Beside Mangnani Function Hall, Venkatesh Nagar, Hingoli Gate, Nanded – 431602, Maharashtra
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
                 <Card variant="glass" hover={false}>
-                  <div className="relative w-full h-[400px] lg:h-[600px] rounded-xl overflow-hidden">
+                  <div className="relative w-full h-[480px] lg:h-[700px] rounded-xl overflow-hidden">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.4845!2d77.317181!3d19.1594484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd1d700606a59fd%3A0xa777cb8656f212fd!2sSolarise%20Corp.!5e0!3m2!1sen!2sin!4v1729430000000!5m2!1sen!2sin"
                       width="100%"

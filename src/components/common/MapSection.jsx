@@ -7,12 +7,12 @@ const MapSection = ({ showAddress = true, className = '' }) => {
     <section className={`bg-white ${className}`}>
       <div className="container-custom py-12">
         {showAddress && (
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-solar-sky-50 to-solar-green-50 px-6 py-4 rounded-2xl">
-              <MapPin className="text-solar-sky-600" size={24} />
-              <div className="text-left">
-                <p className="text-sm text-gray-600 font-medium">Our Office Location</p>
-                <p className="text-gray-900 font-semibold">
+          <div className="mb-8">
+            <div className="flex items-center gap-4 bg-gradient-to-r from-solar-sky-50 to-solar-green-50 px-8 py-6 rounded-2xl w-full">
+              <MapPin className="text-solar-sky-600 flex-shrink-0" size={32} />
+              <div className="flex-1">
+                <p className="text-base text-gray-600 font-medium mb-1">Our Office Location</p>
+                <p className="text-gray-900 font-semibold text-lg">
                   Studio 4, Nandi Building, Beside Mangnani Function Hall, Venkatesh Nagar, Hingoli Gate, Nanded – 431602, Maharashtra
                 </p>
               </div>

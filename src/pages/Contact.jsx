@@ -426,23 +426,30 @@ const Contact = () => {
                   </Card>
                 ))}
               </div>
-
-              <Card variant="glass" className="mt-8">
-                <h3 className="heading-sm text-gray-900 mb-4">Schedule a Visit</h3>
-                <p className="text-gray-600 mb-6">
-                  Prefer to discuss in person? Visit our office during business hours or schedule an appointment.
-                </p>
-                <Button variant="primary" icon={Phone} href="tel:7972574730" fullWidth>
-                  Call to Schedule
-                </Button>
-              </Card>
             </div>
           </div>
+
+          {/* Schedule a Visit - Full Width Landscape */}
+          <Card variant="glass" className="mt-12">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="heading-sm text-gray-900 mb-3">Schedule a Visit</h3>
+                <p className="text-gray-600 text-lg">
+                  Prefer to discuss in person? Visit our office during business hours or schedule an appointment.
+                </p>
+              </div>
+              <div className="flex-shrink-0 w-full md:w-auto">
+                <Button variant="primary" icon={Phone} href="tel:7972574730" size="lg" className="min-w-[250px]">
+                  Call to Schedule
+                </Button>
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
 
       {/* Map Section */}
-      <MapSection showAddress={true} />
+      <MapSection showAddress={false} />
 
       {/* CTA */}
       <section className="bg-gradient-to-r from-solar-sky-600 to-solar-green-600 section-padding text-white">
