@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import SectionTitle from '../components/common/SectionTitle';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
+import MapSection from '../components/common/MapSection';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Office',
-      details: 'Nanded',
+      details: 'Studio 4, Nandi Building, Beside Mangnani Function Hall, Venkatesh Nagar, Hingoli Gate, Nanded – 431602, Maharashtra',
       link: '#',
       color: 'sky'
     },
@@ -231,7 +232,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 text-lg mb-1">Visit Our Office</h3>
-                    <p className="text-gray-600">Nanded</p>
+                    <p className="text-gray-600">Studio 4, Nandi Building, Beside Mangnani Function Hall, Venkatesh Nagar, Hingoli Gate, Nanded – 431602, Maharashtra</p>
                   </div>
                 </div>
               </div>
@@ -441,25 +442,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="bg-white">
-        <div className="container-custom py-12">
-          <Card variant="glass" hover={false}>
-            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-xl overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60369.031!2d77.2938!3d19.1383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bce296dde189d83%3A0x7be8e346c875534b!2sNanded%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1729408800000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Office Location"
-                className="absolute inset-0"
-              ></iframe>
-            </div>
-          </Card>
-        </div>
-      </section>
+      <MapSection showAddress={true} />
 
       {/* CTA */}
       <section className="bg-gradient-to-r from-solar-sky-600 to-solar-green-600 section-padding text-white">
