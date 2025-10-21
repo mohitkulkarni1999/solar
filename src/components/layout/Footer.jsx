@@ -11,7 +11,6 @@ const Footer = () => {
   const companyLinks = [
     { name: 'About Us', path: '/about' },
     { name: 'Our Services', path: '/services' },
-    { name: 'Projects', path: '/projects' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
@@ -186,15 +185,15 @@ const Footer = () => {
             
             {/* Right: Policy Links */}
             <div className="flex gap-6 order-3">
-              <a href="#" className="hover:text-solar-sky-400 transition-colors">
+              <Link to="/privacy-policy" className="hover:text-solar-sky-400 transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="hover:text-solar-sky-400 transition-colors">
+              </Link>
+              <Link to="/terms-of-service" className="hover:text-solar-sky-400 transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="hover:text-solar-sky-400 transition-colors">
+              </Link>
+              <Link to="/cookie-policy" className="hover:text-solar-sky-400 transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -11,6 +11,9 @@ import ResidentialSolar from './pages/ResidentialSolar';
 import CommercialSolar from './pages/CommercialSolar';
 import SolarMaintenance from './pages/SolarMaintenance';
 import EnergyStorage from './pages/EnergyStorage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import CookiePolicy from './pages/CookiePolicy';
 import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
@@ -30,6 +33,9 @@ function App() {
             <Route path="/services/storage" element={<EnergyStorage />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
           </Routes>
         </main>
         <Footer />

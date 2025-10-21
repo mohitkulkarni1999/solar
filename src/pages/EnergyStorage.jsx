@@ -32,7 +32,7 @@ const EnergyStorage = () => {
       name: 'Tesla Powerwall 2',
       capacity: '13.5 kWh',
       power: '5 kW continuous',
-      price: '$11,500',
+      price: '₹9,50,000',
       features: ['Sleek design', 'Weather resistant', 'App monitoring', 'Scalable system', '10-year warranty'],
       icon: '⚡'
     },
@@ -40,7 +40,7 @@ const EnergyStorage = () => {
       name: 'LG RESU',
       capacity: '16 kWh',
       power: '7 kW continuous',
-      price: '$13,900',
+      price: '₹11,50,000',
       popular: true,
       features: ['High capacity', 'Fast charging', 'Compact size', 'Quiet operation', '10-year warranty'],
       icon: '🔋'
@@ -49,7 +49,7 @@ const EnergyStorage = () => {
       name: 'Enphase IQ',
       capacity: '10.1 kWh',
       power: '3.84 kW continuous',
-      price: '$9,800',
+      price: '₹8,10,000',
       features: ['Modular design', 'Easy expansion', 'Integrated inverter', 'Smart management', '15-year warranty'],
       icon: '💡'
     }
@@ -245,7 +245,7 @@ const EnergyStorage = () => {
                   <div className="text-white/80">Solar Self-Consumption</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                  <div className="text-4xl font-bold mb-2">$2K+</div>
+                  <div className="text-4xl font-bold mb-2">₹2L+</div>
                   <div className="text-white/80">Annual Savings</div>
                 </div>
               </div>
@@ -256,20 +256,20 @@ const EnergyStorage = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-solar-sky-50 rounded-xl">
                   <span className="text-gray-700 font-medium">Peak Rate Avoidance</span>
-                  <span className="text-solar-sky-600 font-bold">$800/yr</span>
+                  <span className="text-solar-sky-600 font-bold">₹66,000/yr</span>
                 </div>
                 <div className="flex items-center justify-between p-4 bg-solar-green-50 rounded-xl">
                   <span className="text-gray-700 font-medium">Increased Solar Use</span>
-                  <span className="text-solar-green-600 font-bold">$1,200/yr</span>
+                  <span className="text-solar-green-600 font-bold">₹1,00,000/yr</span>
                 </div>
                 <div className="flex items-center justify-between p-4 bg-solar-sky-50 rounded-xl">
                   <span className="text-gray-700 font-medium">Backup Power Value</span>
-                  <span className="text-solar-sky-600 font-bold">$500/yr</span>
+                  <span className="text-solar-sky-600 font-bold">₹41,000/yr</span>
                 </div>
                 <div className="border-t-2 border-gray-200 pt-4">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-900 font-bold text-lg">Total Annual Savings</span>
-                    <span className="text-2xl font-bold bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">$2,500</span>
+                    <span className="text-2xl font-bold bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">₹2,07,000</span>
                   </div>
                 </div>
               </div>

@@ -141,7 +141,7 @@ const CommercialSolar = () => {
                 <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
                   Success Story
                 </span>
-                <h2 className="text-4xl font-bold mb-6">Manufacturing Plant Saves $125K Annually</h2>
+                <h2 className="text-4xl font-bold mb-6">Manufacturing Plant Saves ₹1 Crore Annually</h2>
                 <p className="text-white/90 text-lg mb-8 leading-relaxed">
                   A 250 kW solar installation helped this manufacturing facility reduce energy costs by 68%, with full ROI achieved in just 5.2 years.
                 </p>
@@ -160,7 +160,7 @@ const CommercialSolar = () => {
                     <div className="text-white/80">System Size</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold text-solar-sky-400 mb-2">$125K</div>
+                    <div className="text-4xl font-bold text-solar-sky-400 mb-2">₹1 Cr</div>
                     <div className="text-white/80">Annual Savings</div>
                   </div>
                 </div>

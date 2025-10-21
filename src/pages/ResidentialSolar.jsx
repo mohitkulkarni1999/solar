@@ -25,20 +25,20 @@ const ResidentialSolar = () => {
     {
       name: 'Starter',
       size: '5 kW',
-      price: '$12,500',
+      price: '₹3,50,000',
       features: ['15-20 solar panels', 'Covers 60% energy needs', 'Basic monitoring', 'Standard warranty']
     },
     {
       name: 'Complete',
       size: '8 kW',
-      price: '$18,900',
+      price: '₹5,60,000',
       popular: true,
       features: ['25-32 solar panels', 'Covers 90% energy needs', 'Smart monitoring', 'Extended warranty', 'Battery ready']
     },
     {
       name: 'Premium',
       size: '12 kW',
-      price: '$26,500',
+      price: '₹8,40,000',
       features: ['38-48 solar panels', '100% energy independence', 'Advanced monitoring', 'Premium warranty', 'Battery included']
     }
   ];

@@ -38,7 +38,7 @@ const SolarMaintenance = () => {
   const plans = [
     {
       name: 'Basic',
-      price: '$199',
+      price: '₹15,000',
       period: '/year',
       features: [
         '1 Annual inspection',
@@ -50,7 +50,7 @@ const SolarMaintenance = () => {
     },
     {
       name: 'Premium',
-      price: '$399',
+      price: '₹30,000',
       period: '/year',
       popular: true,
       features: [
@@ -64,7 +64,7 @@ const SolarMaintenance = () => {
     },
     {
       name: 'Ultimate',
-      price: '$699',
+      price: '₹55,000',
       period: '/year',
       features: [
         'Unlimited inspections',
@@ -81,7 +81,7 @@ const SolarMaintenance = () => {
     { stat: '25%', label: 'Efficiency loss without cleaning', color: 'red' },
     { stat: '98%', label: 'Uptime with regular maintenance', color: 'green' },
     { stat: '5-7 yrs', label: 'Extended system lifespan', color: 'sky' },
-    { stat: '$500+', label: 'Average annual savings', color: 'green' }
+    { stat: '₹40,000+', label: 'Average annual savings', color: 'green' }
   ];
 
   return (
