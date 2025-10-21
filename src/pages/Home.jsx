@@ -151,24 +151,21 @@ const Home = () => {
     'Professional maintenance and support'
   ];
 
-  const testimonials = [
+  const whyChooseUs = [
     {
-      name: 'Sarah Johnson',
-      role: 'Homeowner',
-      content: 'Solarise Corp transformed our home! Our energy bills dropped by 65% in the first year. The installation was smooth and professional.',
-      rating: 5
+      title: 'End-to-End Solar Solutions',
+      content: 'From initial consultation to installation and maintenance, we handle everything. Complete EPC services including permits, subsidies, and financing assistance.',
+      icon: '🔧'
     },
     {
-      name: 'Michael Chen',
-      role: 'Business Owner',
-      content: 'Outstanding service from start to finish. The team was knowledgeable, efficient, and the results exceeded our expectations.',
-      rating: 5
+      title: 'Premium Quality Panels',
+      content: 'Industry-leading solar panels with 25-year warranty. Maximum efficiency, durability, and performance guaranteed for decades.',
+      icon: '⚡'
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Property Manager',
-      content: 'We installed solar panels on multiple properties. Solarise Corp delivered exceptional quality and ongoing support. Highly recommended!',
-      rating: 5
+      title: 'Expert Team & Support',
+      content: 'Certified professionals with deep expertise in solar technology. 24/7 monitoring and maintenance support to keep your system running perfectly.',
+      icon: '👥'
     }
   ];
 
@@ -184,14 +181,17 @@ const Home = () => {
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-4xl">🌞</span>
+                <h2 className="text-2xl font-bold text-gray-900">Solarise Corp</h2>
+              </div>
               <h1 className="heading-xl text-gray-900 mb-6">
-                Harness the Power of{' '}
                 <span className="bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">
-                  Clean Energy
+                  Shaping Tomorrow, One Ray at a Time.
                 </span>
               </h1>
               <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                Transform sunlight into savings with our premium solar solutions. Industry-leading technology, expert installation, and exceptional service for residential and commercial properties.
+                Transform your rooftop into a lifetime of savings, sustainability, and self-power.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <Button variant="primary" icon={ArrowRight} to="/contact">
@@ -289,6 +289,75 @@ const Home = () => {
         </div>
       </section>
 
+      {/* The Smarter Way to Save Section */}
+      <section className="bg-gradient-to-br from-solar-sky-50 via-white to-solar-green-50 section-padding">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-solar-sky-500 to-solar-green-500 text-white rounded-full text-sm font-bold mb-8 shadow-lg">
+              <span className="text-2xl">💡</span>
+              <span>The Smarter Way to Save</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Every sunrise brings a chance to{' '}
+              <span className="bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">
+                save smart
+              </span>
+            </h2>
+            
+            <p className="text-xl text-gray-700 leading-relaxed mb-8">
+              Yet every month without solar is money quietly leaving your pocket.
+            </p>
+            
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100 mb-8">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                It's not an expense — <span className="font-bold text-solar-sky-600">it's the smartest investment you can make</span> for your home, your wallet, and the planet.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-6 text-left">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-solar-green-500 flex-shrink-0 mt-1" size={24} />
+                    <div>
+                      <p className="font-semibold text-gray-900">Tax-Free Returns</p>
+                      <p className="text-gray-600">Better than traditional investments</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-solar-green-500 flex-shrink-0 mt-1" size={24} />
+                    <div>
+                      <p className="font-semibold text-gray-900">Outperforms FDs, Shares & Gold</p>
+                      <p className="text-gray-600">Guaranteed long-term savings</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-solar-green-500 flex-shrink-0 mt-1" size={24} />
+                    <div>
+                      <p className="font-semibold text-gray-900">Pays for Itself</p>
+                      <p className="text-gray-600">Unlike any other appliance</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="text-solar-green-500 flex-shrink-0 mt-1" size={24} />
+                    <div>
+                      <p className="font-semibold text-gray-900">100 Trees Per Panel</p>
+                      <p className="text-gray-600">Carbon offset equivalent</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <p className="text-lg text-gray-700 italic">
+              Each panel offsets as much carbon as planting 100 trees, making every unit of energy <span className="font-bold">clean, personal, and profitable</span>.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="bg-white section-padding">
         <div className="container-custom">
@@ -325,30 +394,23 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Why Choose Us Section */}
       <section className="bg-gradient-to-br from-solar-sky-50 to-solar-green-50 section-padding">
         <div className="container-custom">
           <SectionTitle 
-            subtitle="Testimonials"
-            title="What Our Clients Say"
-            description="Don't just take our word for it—hear from satisfied customers who've made the switch"
+            subtitle="Why Choose Us"
+            title="Your Trusted Solar Partner"
+            description="Comprehensive solar solutions designed for your success"
           />
           
           <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {testimonials.map((testimonial, index) => (
+            {whyChooseUs.map((item, index) => (
               <Card key={index} variant="glass">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Sun key={i} className="text-solar-sky-500 fill-current" size={20} />
-                  ))}
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-6 italic">
-                  "{testimonial.content}"
+                <div className="text-5xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {item.content}
                 </p>
-                <div className="border-t border-gray-200 pt-4">
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
-                </div>
               </Card>
             ))}
           </div>
@@ -366,8 +428,8 @@ const Home = () => {
             <Button variant="white" icon={ArrowRight} to="/contact">
               Request Free Quote
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10" icon={Phone} href="tel:7972574730">
-              Call: 7972574730
+            <Button variant="outline" className="border-white text-white hover:bg-white/10" icon={Phone} href="tel:+917972574730">
+              Call: +91-7972574730
             </Button>
           </div>
         </div>
@@ -377,11 +439,15 @@ const Home = () => {
       <section className="bg-gradient-to-br from-gray-50 to-white section-padding">
         <div className="container-custom">
           <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-solar-sky-500 to-solar-green-500 text-white rounded-full text-sm font-bold mb-6 shadow-lg">
+              <span className="text-2xl">📞</span>
+              <span>Let's Build Your Solar Future</span>
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-solar-sky-600 to-solar-green-600">Touch</span>
+              Ready to stop paying bills and start <span className="text-transparent bg-clip-text bg-gradient-to-r from-solar-sky-600 to-solar-green-600">owning power?</span>
             </h2>
             <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">
-              Ready to transform your energy future? Reach out to us today and let's discuss how solar can work for you
+              Let our experts design a system tailored to your home, your goals, and your savings
             </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -449,7 +515,7 @@ const Home = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all`}
-                      placeholder="7972574730"
+                      placeholder="+91-7972574730"
                     />
                     {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                   </div>

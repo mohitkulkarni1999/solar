@@ -22,15 +22,15 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '7972574730',
-      link: 'tel:7972574730',
+      details: '+91-7972574730',
+      link: 'tel:+917972574730',
       color: 'sky'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'info.solarisecorp@gmail.com',
-      link: 'mailto:info.solarisecorp@gmail.com',
+      details: 'info@solarise.in',
+      link: 'mailto:info@solarise.in',
       color: 'green'
     },
     {
@@ -195,29 +195,36 @@ const Contact = () => {
                 <br />
                 <span className="text-solar-sky-200">Touch</span>
               </h1>
-              <p className="text-xl text-white/90 mb-8 max-w-lg leading-relaxed">
-                Ready to start your solar journey? Contact us for a free consultation and personalized quote.
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-solar-green-500 to-solar-green-600 rounded-full text-sm font-bold mb-6 shadow-lg">
+                <span className="text-2xl">📞</span>
+                <span>Let's Build Your Solar Future</span>
+              </div>
+              <p className="text-xl text-white/90 mb-4 max-w-lg leading-relaxed">
+                Ready to stop paying bills and start owning power?
+              </p>
+              <p className="text-lg text-white/80 mb-8 max-w-lg leading-relaxed">
+                Let our experts design a system tailored to your home, your goals, and your savings.
               </p>
               
               {/* Quick Contact Bubbles */}
               <div className="flex flex-wrap gap-4">
-                <a href="tel:7972574730" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
+                <a href="tel:+917972574730" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone className="text-white" size={20} />
                   </div>
                   <div>
                     <div className="text-xs text-white/70">Call Us</div>
-                    <div className="font-semibold">7972574730</div>
+                    <div className="font-semibold">+91-7972574730</div>
                   </div>
                 </a>
                 
-                <a href="mailto:info.solarisecorp@gmail.com" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
+                <a href="mailto:info@solarise.in" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="text-white" size={20} />
                   </div>
                   <div>
                     <div className="text-xs text-white/70">Email Us</div>
-                    <div className="font-semibold">info.solarisecorp@gmail.com</div>
+                    <div className="font-semibold">info@solarise.in</div>
                   </div>
                 </a>
               </div>
@@ -358,7 +365,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         className={`w-full px-4 py-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all`}
-                        placeholder="7972574730"
+                        placeholder="+91-7972574730"
                       />
                       {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                     </div>
@@ -439,7 +446,7 @@ const Contact = () => {
                 </p>
               </div>
               <div className="flex-shrink-0 w-full md:w-auto">
-                <Button variant="primary" icon={Phone} href="tel:7972574730" size="lg" className="min-w-[250px]">
+                <Button variant="primary" icon={Phone} href="tel:+917972574730" size="lg" className="min-w-[250px]">
                   Call to Schedule
                 </Button>
               </div>
@@ -458,8 +465,8 @@ const Contact = () => {
           <p className="text-xl mb-8 text-solar-sky-50 max-w-2xl mx-auto">
             Call us now and speak directly with our solar experts.
           </p>
-          <Button variant="white" icon={Phone} href="tel:7972574730" size="lg">
-            Call: 7972574730
+          <Button variant="white" icon={Phone} href="tel:+917972574730" size="lg">
+            Call: +91-7972574730
           </Button>
         </div>
       </section>

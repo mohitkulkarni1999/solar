@@ -1,8 +1,9 @@
 import React from 'react';
-import { Target, Eye, Award, Users, Briefcase, Shield, TrendingUp, Heart } from 'lucide-react';
+import { Target, Eye, Award, Users, Briefcase, Shield, TrendingUp, Heart, ArrowRight } from 'lucide-react';
 import SectionTitle from '../components/common/SectionTitle';
 import Card from '../components/common/Card';
 import StatCard from '../components/common/StatCard';
+import Button from '../components/common/Button';
 
 const About = () => {
   const values = [
@@ -34,38 +35,31 @@ const About = () => {
 
   const team = [
     {
-      name: 'John Anderson',
-      role: 'CEO & Founder',
-      description: '15+ years in renewable energy industry',
+      name: 'Leadership Team',
+      role: 'Strategic Direction',
+      description: 'Expert guidance in renewable energy',
       image: '👨‍💼'
     },
     {
-      name: 'Sarah Mitchell',
-      role: 'Chief Technology Officer',
-      description: 'Solar engineering expert with 20+ patents',
+      name: 'Technical Team',
+      role: 'Solar Engineering',
+      description: 'Cutting-edge solar technology expertise',
       image: '👩‍💻'
     },
     {
-      name: 'David Chen',
-      role: 'Operations Director',
-      description: 'Managed 1000+ successful installations',
+      name: 'Installation Team',
+      role: 'Field Operations',
+      description: 'Professional installation excellence',
       image: '👨‍🔧'
     },
     {
-      name: 'Emily Thompson',
-      role: 'Customer Relations Manager',
-      description: 'Dedicated to client satisfaction excellence',
+      name: 'Support Team',
+      role: 'Customer Success',
+      description: 'Dedicated to your satisfaction',
       image: '👩‍💼'
     }
   ];
 
-  const timeline = [
-    { year: '2010', event: 'Company Founded', description: 'Started with a vision to make solar energy accessible' },
-    { year: '2013', event: '1000th Installation', description: 'Reached milestone of 1000 solar installations' },
-    { year: '2016', event: 'National Expansion', description: 'Expanded operations to serve nationwide' },
-    { year: '2019', event: 'Industry Awards', description: 'Received multiple excellence awards' },
-    { year: '2023', event: '5000+ Customers', description: 'Celebrated serving over 5000 satisfied customers' }
-  ];
 
   return (
     <div className="overflow-hidden">
@@ -83,7 +77,7 @@ const About = () => {
             {/* Left Side - Content */}
             <div className="animate-fade-in">
               <div className="inline-block px-6 py-2 bg-gradient-to-r from-solar-sky-500 to-solar-green-500 text-white rounded-full text-sm font-bold mb-6 shadow-lg">
-                EST. 2010
+                NEW VISION, BRIGHT FUTURE
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 About{' '}
@@ -102,23 +96,30 @@ const About = () => {
                   </svg>
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Leading the solar revolution since 2010. We're passionate about creating a sustainable future through innovative solar energy solutions.
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-solar-sky-500 to-solar-green-500 text-white rounded-full text-sm font-bold mb-6 shadow-lg">
+                <span className="text-2xl">🏢</span>
+                <span>About Us</span>
+              </div>
+              <p className="text-xl text-gray-600 leading-relaxed mb-4">
+                At Solarise Corp, we believe the future belongs to those who create it — sustainably.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                Our vision is to make every rooftop a source of power, pride, and progress — helping individuals and businesses achieve energy independence while contributing to a cleaner, greener planet.
               </p>
               
               {/* Quick Stats */}
               <div className="flex flex-wrap gap-8">
                 <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">13+</div>
-                  <div className="text-sm text-gray-600 font-medium">Years Experience</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">100%</div>
+                  <div className="text-sm text-gray-600 font-medium">Commitment</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">5000+</div>
-                  <div className="text-sm text-gray-600 font-medium">Projects Completed</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">24/7</div>
+                  <div className="text-sm text-gray-600 font-medium">Support Available</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">50+</div>
-                  <div className="text-sm text-gray-600 font-medium">Awards Won</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">25Yr</div>
+                  <div className="text-sm text-gray-600 font-medium">Panel Warranty</div>
                 </div>
               </div>
             </div>
@@ -169,7 +170,10 @@ const About = () => {
                 <h2 className="heading-md text-gray-900">Our Mission</h2>
               </div>
               <p className="text-gray-600 text-lg leading-relaxed">
-                To empower homes and businesses with clean, affordable solar energy solutions that reduce environmental impact while maximizing financial savings. We're committed to making renewable energy accessible to everyone.
+                As a trusted Solar EPC (Engineering, Procurement & Construction) company, Solarise Corp offers complete end-to-end solar solutions — making clean energy simple, reliable, and rewarding for everyone.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed mt-4">
+                From site inspection, system design, and panel selection to installation, subsidy assistance, and regulatory permits, our team ensures a smooth and transparent experience. We also provide financing and loan assistance, helping customers switch to solar with ease and confidence.
               </p>
             </Card>
 
@@ -181,7 +185,10 @@ const About = () => {
                 <h2 className="heading-md text-gray-900">Our Vision</h2>
               </div>
               <p className="text-gray-600 text-lg leading-relaxed">
-                To become the nation's most trusted solar energy provider, pioneering sustainable solutions that transform communities and create a cleaner, brighter future for generations to come.
+                Our services go beyond installation — we deliver long-term maintenance, performance monitoring, and surveillance support to keep every system running efficiently for decades.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed mt-4">
+                At Solarise, we merge innovation with integrity — turning rooftops into self-sustaining assets and homes into long-term sources of savings. Because we don't just install solar panels — we engineer independence, empower savings, and light up lives, one ray at a time.
               </p>
             </Card>
           </div>
@@ -192,16 +199,16 @@ const About = () => {
       <section className="bg-gradient-to-br from-gray-50 to-white section-padding">
         <div className="container-custom">
           <SectionTitle 
-            subtitle="Our Impact"
-            title="Numbers That Speak"
-            description="Over a decade of excellence in solar energy solutions"
+            subtitle="Our Commitment"
+            title="What We Offer"
+            description="Quality solar solutions with industry-leading warranties and support"
           />
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            <StatCard icon={Users} value="5000" suffix="+" label="Satisfied Customers" color="sky" />
-            <StatCard icon={Briefcase} value="13" suffix=" Years" label="Industry Experience" color="green" />
-            <StatCard icon={Award} value="50" suffix="+" label="Awards & Recognition" color="sky" />
-            <StatCard icon={TrendingUp} value="15" suffix=" MW" label="Total Energy Generated" color="green" />
+            <StatCard icon={Users} value="100" suffix="%" label="Customer Satisfaction Goal" color="sky" />
+            <StatCard icon={Briefcase} value="25" suffix=" Yrs" label="Panel Warranty" color="green" />
+            <StatCard icon={Award} value="0" suffix="%" label="Down Payment Options" color="sky" />
+            <StatCard icon={TrendingUp} value="70" suffix="%" label="Potential Bill Savings" color="green" />
           </div>
         </div>
       </section>
@@ -229,37 +236,102 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="bg-gradient-to-br from-solar-sky-50 to-solar-green-50 section-padding">
-        <div className="container-custom">
+      {/* Journey Section - Modern Card Grid */}
+      <section className="bg-gradient-to-br from-solar-sky-50 to-solar-green-50 section-padding relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-20 right-10 w-64 h-64 bg-solar-sky-200 rounded-full blur-3xl opacity-30 animate-float"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-solar-green-200 rounded-full blur-3xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
+        
+        <div className="container-custom relative z-10">
           <SectionTitle 
-            subtitle="Our Journey"
-            title="Milestones & Achievements"
-            description="A decade of innovation and growth in solar energy"
+            subtitle="Our Approach"
+            title="Your Path to Solar Success"
+            description="A comprehensive journey from consultation to clean energy independence"
           />
           
-          <div className="mt-16 relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-solar-sky-300 to-solar-green-300 hidden lg:block"></div>
-            
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <div key={index} className={`flex flex-col lg:flex-row gap-8 items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-                  <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
-                    <Card variant="glass">
-                      <h3 className="heading-sm text-gray-900 mb-2">{item.event}</h3>
-                      <p className="text-gray-600">{item.description}</p>
-                    </Card>
-                  </div>
-                  
-                  <div className="relative z-10 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-solar-sky-500 to-solar-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-xl">
-                      {item.year}
-                    </div>
-                  </div>
-                  
-                  <div className="flex-1"></div>
+          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-solar-sky-100 to-solar-sky-200 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-solar-sky-400 to-solar-sky-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white text-2xl font-bold shadow-lg">
+                  01
                 </div>
-              ))}
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Consultation & Planning</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We analyze your property, energy needs, and goals to design the perfect solar solution tailored for you.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-solar-green-100 to-solar-green-200 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-solar-green-400 to-solar-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white text-2xl font-bold shadow-lg">
+                  02
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">System Design</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Our experts create a custom solar system design optimized for maximum efficiency and savings.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-solar-sky-100 to-solar-green-100 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-solar-sky-400 to-solar-green-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white text-2xl font-bold shadow-lg">
+                  03
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Permits & Approvals</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We handle all paperwork, permits, subsidies, and regulatory approvals - completely hassle-free for you.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-solar-green-100 to-solar-sky-100 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-solar-green-400 to-solar-sky-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white text-2xl font-bold shadow-lg">
+                  04
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Professional Installation</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Our certified team installs your system with precision, safety, and minimal disruption to your routine.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 5 */}
+            <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-solar-sky-100 to-solar-sky-200 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-solar-sky-500 to-solar-sky-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white text-2xl font-bold shadow-lg">
+                  05
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Activation & Support</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  System activation, grid connection, and ongoing 24/7 monitoring to ensure peak performance.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 6 - Featured */}
+            <div className="group relative bg-gradient-to-br from-solar-sky-600 to-solar-green-600 rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 text-white">
+              <div className="absolute inset-0 bg-white/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white text-3xl font-bold shadow-lg">
+                  ⚡
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Enjoy Clean Energy</h3>
+                <p className="text-white/90 leading-relaxed">
+                  Start saving immediately while contributing to a sustainable future. Welcome to energy independence!
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -269,9 +341,9 @@ const About = () => {
       <section className="bg-white section-padding">
         <div className="container-custom">
           <SectionTitle 
-            subtitle="Meet The Team"
-            title="Leadership & Expertise"
-            description="Experienced professionals dedicated to your solar success"
+            subtitle="Our Team"
+            title="Expert Departments"
+            description="Dedicated professionals across all areas to ensure your solar success"
           />
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
@@ -294,10 +366,13 @@ const About = () => {
       {/* CTA */}
       <section className="bg-gradient-to-r from-solar-sky-600 to-solar-green-600 section-padding text-white">
         <div className="container-custom text-center">
-          <h2 className="heading-lg mb-6">Join Our Solar Family</h2>
+          <h2 className="heading-lg mb-6">Start Your Solar Journey</h2>
           <p className="text-xl mb-8 text-solar-sky-50 max-w-2xl mx-auto">
-            Become part of thousands of satisfied customers who've made the switch to clean energy.
+            Be among the first to experience our commitment to excellence in solar energy solutions.
           </p>
+          <Button variant="white" icon={ArrowRight} to="/contact" size="lg">
+            Get Started Today
+          </Button>
         </div>
       </section>
     </div>

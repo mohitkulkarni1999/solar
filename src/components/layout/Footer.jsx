@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
-import logo from '../../assets/logo/Gemini_Generated_Image_nd51cxnd51cxnd51-removebg-preview.png';
+import logo from '../../assets/logo/footerlogo.png';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -23,8 +23,8 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: Phone, text: '7972574730', href: 'tel:7972574730' },
-    { icon: Mail, text: 'info.solarisecorp@gmail.com', href: 'mailto:info.solarisecorp@gmail.com' },
+    { icon: Phone, text: '+91-7972574730', href: 'tel:+917972574730' },
+    { icon: Mail, text: 'info@solarise.in', href: 'mailto:info@solarise.in' },
     { icon: MapPin, text: 'Studio 4, Nandi Building, Beside Mangnani Function Hall, Venkatesh Nagar, Hingoli Gate, Nanded – 431602, Maharashtra' },
   ];
 
@@ -47,33 +47,30 @@ const Footer = () => {
       </button>
 
       <div className="container-custom pt-20 pb-8">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Company Info */}
-          <div className="space-y-6">
-            <Link to="/" className="flex items-center group">
+        {/* Logo and Company Description - Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-8 lg:gap-16 mb-12 items-start">
+          {/* Left: Logo */}
+          <div>
+            <Link to="/" className="inline-block group">
               <img 
                 src={logo} 
                 alt="Solarise Corp" 
                 className="h-16 w-auto md:h-20 transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
-            <p className="text-gray-400 leading-relaxed">
-              Leading provider of sustainable solar energy solutions. Transforming sunlight into savings for over a decade.
-            </p>
-            <div className="flex gap-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="p-2.5 bg-gray-800 hover:bg-solar-sky-600 rounded-lg transition-all duration-300 hover:scale-110"
-                >
-                  <social.icon size={20} />
-                </a>
-              ))}
-            </div>
           </div>
+
+          {/* Right: Description */}
+          <div>
+            <h3 className="text-white font-bold text-2xl mb-4">Solarise Corp</h3>
+            <p className="text-gray-400 leading-relaxed text-lg">
+              We believe the future belongs to those who create it — sustainably. Making every rooftop a source of power, pride, and progress. Engineering independence, empowering savings, and lighting up lives, one ray at a time.
+            </p>
+          </div>
+        </div>
+
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 
           {/* Quick Links */}
           <div>
@@ -167,11 +164,28 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-            <p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
+            {/* Left: Copyright */}
+            <p className="order-2 md:order-1">
               © {new Date().getFullYear()} Solarise Corp. All rights reserved.
             </p>
-            <div className="flex gap-6">
+            
+            {/* Center: Social Media Icons */}
+            <div className="flex gap-3 order-1 md:order-2">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="p-2.5 bg-gray-800 hover:bg-solar-sky-600 rounded-lg transition-all duration-300 hover:scale-110"
+                >
+                  <social.icon size={18} />
+                </a>
+              ))}
+            </div>
+            
+            {/* Right: Policy Links */}
+            <div className="flex gap-6 order-3">
               <a href="#" className="hover:text-solar-sky-400 transition-colors">
                 Privacy Policy
               </a>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail } from 'lucide-react';
-import logo from '../../assets/logo/Gemini_Generated_Image_nd51cxnd51cxnd51-removebg-preview.png';
+import logo from '../../assets/logo/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,13 +32,13 @@ const Header = () => {
         <div className="container-custom">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center gap-6">
-              <a href="mailto:info.solarisecorp@gmail.com" className="flex items-center gap-2 hover:text-solar-sky-100 transition">
+              <a href="mailto:info@solarise.in" className="flex items-center gap-2 hover:text-solar-sky-100 transition">
                 <Mail size={16} />
-                <span>info.solarisecorp@gmail.com</span>
+                <span>info@solarise.in</span>
               </a>
-              <a href="tel:7972574730" className="flex items-center gap-2 hover:text-solar-sky-100 transition">
+              <a href="tel:+917972574730" className="flex items-center gap-2 hover:text-solar-sky-100 transition">
                 <Phone size={16} />
-                <span>7972574730</span>
+                <span>+91-7972574730</span>
               </a>
             </div>
             <div className="text-solar-sky-100">

@@ -8,7 +8,7 @@ const Projects = () => {
   const [filter, setFilter] = useState('all');
 
   const categories = [
-    { id: 'all', label: 'All Projects' },
+    { id: 'all', label: 'All Services' },
     { id: 'residential', label: 'Residential' },
     { id: 'commercial', label: 'Commercial' },
     { id: 'industrial', label: 'Industrial' }
@@ -17,111 +17,111 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Modern Family Home',
+      title: 'Family Home Solar',
       category: 'residential',
-      location: 'Los Angeles, CA',
-      date: 'March 2024',
-      systemSize: '8.5 kW',
-      savings: '72%',
+      location: 'Residential Solution',
+      date: 'Custom Design',
+      systemSize: '5-15 kW',
+      savings: 'Up to 70%',
       image: '🏡',
-      description: 'Complete rooftop solar installation with battery backup system for a 3,200 sq ft home.',
-      features: ['Tesla Powerwall', 'Smart monitoring', 'Net metering']
+      description: 'Complete rooftop solar installation with battery backup options designed for modern homes.',
+      features: ['Battery storage ready', 'Smart monitoring', 'Net metering support']
     },
     {
       id: 2,
-      title: 'Corporate Office Building',
+      title: 'Commercial Office Solutions',
       category: 'commercial',
-      location: 'San Francisco, CA',
-      date: 'February 2024',
-      systemSize: '125 kW',
-      savings: '68%',
+      location: 'Business Solution',
+      date: 'Scalable Systems',
+      systemSize: '50-200 kW',
+      savings: 'Up to 65%',
       image: '🏢',
-      description: 'Large-scale commercial installation reducing operational costs for a tech company headquarters.',
-      features: ['High-efficiency panels', 'EV charging stations', 'Remote monitoring']
+      description: 'Large-scale commercial installations designed to reduce operational costs for businesses.',
+      features: ['High-efficiency panels', 'EV charging integration', 'Remote monitoring']
     },
     {
       id: 3,
-      title: 'Suburban Residence',
+      title: 'Suburban Homes',
       category: 'residential',
-      location: 'Austin, TX',
-      date: 'January 2024',
-      systemSize: '6.8 kW',
-      savings: '65%',
+      location: 'Residential Solution',
+      date: 'Flexible Options',
+      systemSize: '4-10 kW',
+      savings: 'Up to 65%',
       image: '🏠',
-      description: 'Energy-efficient solar solution with modern aesthetics for a growing family.',
+      description: 'Energy-efficient solar solutions with modern aesthetics perfect for any home.',
       features: ['Premium panels', 'App control', '25-year warranty']
     },
     {
       id: 4,
-      title: 'Manufacturing Facility',
+      title: 'Manufacturing & Industrial',
       category: 'industrial',
-      location: 'Phoenix, AZ',
-      date: 'December 2023',
-      systemSize: '350 kW',
-      savings: '70%',
+      location: 'Industrial Solution',
+      date: 'Heavy-Duty Systems',
+      systemSize: '200-500 kW',
+      savings: 'Up to 70%',
       image: '🏭',
-      description: 'Industrial-scale solar array powering manufacturing operations with significant cost savings.',
-      features: ['High-capacity system', 'Industrial monitoring', 'Peak demand reduction']
+      description: 'Industrial-scale solar arrays designed for manufacturing operations and heavy power needs.',
+      features: ['High-capacity systems', 'Industrial monitoring', 'Peak demand reduction']
     },
     {
       id: 5,
-      title: 'Luxury Estate',
+      title: 'Premium Estates',
       category: 'residential',
-      location: 'Miami, FL',
-      date: 'November 2023',
-      systemSize: '12.5 kW',
-      savings: '75%',
+      location: 'Luxury Solution',
+      date: 'Premium Design',
+      systemSize: '10-25 kW',
+      savings: 'Up to 75%',
       image: '🏰',
-      description: 'Premium solar installation with multiple arrays and comprehensive energy storage.',
-      features: ['Dual battery system', 'Pool heating integration', 'Smart home compatible']
+      description: 'Premium solar installations with multiple arrays and comprehensive energy storage options.',
+      features: ['Multi-battery options', 'Pool heating integration', 'Smart home compatible']
     },
     {
       id: 6,
-      title: 'Shopping Center',
+      title: 'Retail & Shopping Centers',
       category: 'commercial',
-      location: 'Seattle, WA',
-      date: 'October 2023',
-      systemSize: '200 kW',
-      savings: '66%',
+      location: 'Retail Solution',
+      date: 'Custom Configuration',
+      systemSize: '100-300 kW',
+      savings: 'Up to 66%',
       image: '🏬',
-      description: 'Rooftop and carport solar installation providing power and shade for retail complex.',
-      features: ['Carport integration', 'Tenant billing', 'Weather monitoring']
+      description: 'Rooftop and carport solar solutions providing power and shade for retail spaces.',
+      features: ['Carport integration', 'Tenant billing ready', 'Weather monitoring']
     },
     {
       id: 7,
-      title: 'Warehouse Complex',
+      title: 'Warehouses & Logistics',
       category: 'industrial',
-      location: 'Dallas, TX',
-      date: 'September 2023',
-      systemSize: '450 kW',
-      savings: '73%',
+      location: 'Logistics Solution',
+      date: 'Scalable Design',
+      systemSize: '300-600 kW',
+      savings: 'Up to 73%',
       image: '🏗️',
-      description: 'Massive solar installation across multiple warehouse rooftops for logistics company.',
+      description: 'Large-scale solar installations across warehouse rooftops perfect for logistics operations.',
       features: ['Fleet charging ready', 'Scalable design', 'Performance guarantees']
     },
     {
       id: 8,
-      title: 'Community Center',
+      title: 'Community & Public Facilities',
       category: 'commercial',
-      location: 'Portland, OR',
-      date: 'August 2023',
-      systemSize: '85 kW',
-      savings: '69%',
+      location: 'Public Sector',
+      date: 'Government Ready',
+      systemSize: '50-150 kW',
+      savings: 'Up to 69%',
       image: '🏛️',
-      description: 'Solar solution for public facility demonstrating commitment to sustainability.',
-      features: ['Educational displays', 'Public accessibility', 'Grant funded']
+      description: 'Solar solutions for public facilities demonstrating commitment to sustainability.',
+      features: ['Educational displays', 'Public accessible', 'Grant assistance']
     },
     {
       id: 9,
-      title: 'Beach House',
+      title: 'Coastal & Special Climate',
       category: 'residential',
-      location: 'San Diego, CA',
-      date: 'July 2023',
-      systemSize: '9.2 kW',
-      savings: '71%',
+      location: 'All Weather Solution',
+      date: 'Climate Optimized',
+      systemSize: '6-12 kW',
+      savings: 'Up to 71%',
       image: '🏖️',
-      description: 'Coastal-grade solar system designed to withstand salt air and harsh conditions.',
-      features: ['Corrosion resistant', 'Hurricane rated', 'Aesthetic integration']
+      description: 'Weather-resistant solar systems designed to withstand harsh conditions and climates.',
+      features: ['Corrosion resistant', 'Weather rated', 'Aesthetic integration']
     }
   ];
 
@@ -130,10 +130,10 @@ const Projects = () => {
     : projects.filter(project => project.category === filter);
 
   const stats = [
-    { icon: Award, value: '150+', label: 'Completed Projects' },
-    { icon: Zap, value: '25 MW', label: 'Total Capacity' },
-    { icon: TrendingUp, value: '98%', label: 'Client Satisfaction' },
-    { icon: Home, value: '5000+', label: 'Happy Customers' }
+    { icon: Award, value: '9+', label: 'Service Options' },
+    { icon: Zap, value: '25Yr', label: 'Panel Warranty' },
+    { icon: TrendingUp, value: '70%', label: 'Potential Savings' },
+    { icon: Home, value: '0%', label: 'Down Payment Plans' }
   ];
 
   return (
@@ -147,26 +147,26 @@ const Projects = () => {
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl transform translate-x-32 -translate-y-32 group-hover:scale-150 transition-transform duration-700"></div>
               <div className="relative z-10">
                 <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
-                  150+ Projects Completed
+                  Comprehensive Solar Solutions
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  Our Project
+                  Our Solar
                   <br />
-                  <span className="text-solar-sky-100">Portfolio</span>
+                  <span className="text-solar-sky-100">Capabilities</span>
                 </h1>
                 <p className="text-lg text-white/90 mb-8 max-w-lg">
-                  Explore our successful solar installations across residential, commercial, and industrial sectors.
+                  Discover our comprehensive solar solutions designed for residential, commercial, and industrial needs.
                 </p>
                 
                 {/* Quick Stats */}
                 <div className="flex flex-wrap gap-6">
                   <div className="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
-                    <div className="text-3xl font-bold">25 MW</div>
-                    <div className="text-sm text-white/80">Total Capacity</div>
+                    <div className="text-3xl font-bold">25 Yr</div>
+                    <div className="text-sm text-white/80">Warranty</div>
                   </div>
                   <div className="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
-                    <div className="text-3xl font-bold">98%</div>
-                    <div className="text-sm text-white/80">Satisfaction</div>
+                    <div className="text-3xl font-bold">70%</div>
+                    <div className="text-sm text-white/80">Savings</div>
                   </div>
                 </div>
               </div>
@@ -235,9 +235,9 @@ const Projects = () => {
       <section className="bg-gradient-to-br from-gray-50 to-white section-padding">
         <div className="container-custom">
           <SectionTitle 
-            subtitle="Featured Work"
-            title="Recent Installations"
-            description="Successful solar projects delivering exceptional results"
+            subtitle="What We Offer"
+            title="Solar Solutions for Every Need"
+            description="Comprehensive solar installations designed to deliver exceptional results for your property"
           />
 
           {/* Filter Buttons */}
