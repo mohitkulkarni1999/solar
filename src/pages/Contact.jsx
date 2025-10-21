@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-import SectionTitle from '../components/common/SectionTitle';
-import Card from '../components/common/Card';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import Button from '../components/common/Button';
+import Card from '../components/common/Card';
+import SectionTitle from '../components/common/SectionTitle';
 import MapSection from '../components/common/MapSection';
+import { WEB3FORMS_CONFIG } from '../config/forms';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -115,25 +116,29 @@ const Contact = () => {
       setLoading(true);
       
       try {
-        // Web3Forms API endpoint - FREE form submission service (no backend needed!)
-        // Get your free access key: https://web3forms.com
-        const response = await fetch('https://api.web3forms.com/submit', {
+        const formPayload = {
+          access_key: WEB3FORMS_CONFIG.accessKey,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          property_type: formData.propertyType,
+          message: formData.message,
+          from_name: 'Solarise Corp Contact Form',
+          subject: `New Contact Form Submission - ${formData.propertyType}`
+        };
+
+        const response = await fetch(WEB3FORMS_CONFIG.endpoint, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify({
-            access_key: '78a7b63a-885a-4fbc-b077-7837c5595221',
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            property_type: formData.propertyType,
-            message: formData.message,
-            from_name: 'Solarise Corp Contact Form',
-            subject: `New Contact Form Submission - ${formData.propertyType}`
-          })
+          body: JSON.stringify(formPayload)
         });
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
         
         const result = await response.json();
         

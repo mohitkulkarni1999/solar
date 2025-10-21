@@ -5,6 +5,7 @@ import Card from '../components/common/Card';
 import StatCard from '../components/common/StatCard';
 import SectionTitle from '../components/common/SectionTitle';
 import MapSection from '../components/common/MapSection';
+import { WEB3FORMS_CONFIG } from '../config/forms';
 import bannerImage from '../assets/Gemini_Generated_Image_3yjrdy3yjrdy3yjr.png';
 import bgImage from '../assets/Gemini_Generated_Image_un29ilun29ilun29.png';
 
@@ -69,23 +70,29 @@ const Home = () => {
       
       try {
         // Web3Forms API endpoint - FREE form submission service (no backend needed!)
-        const response = await fetch('https://api.web3forms.com/submit', {
+        const formPayload = {
+          access_key: WEB3FORMS_CONFIG.accessKey,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          property_type: formData.propertyType,
+          message: formData.message,
+          from_name: 'Solarise Corp - Homepage Form',
+          subject: `New Homepage Contact - ${formData.propertyType}`
+        };
+
+        const response = await fetch(WEB3FORMS_CONFIG.endpoint, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify({
-            access_key: '78a7b63a-885a-4fbc-b077-7837c5595221',
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            property_type: formData.propertyType,
-            message: formData.message,
-            from_name: 'Solarise Corp - Homepage Form',
-            subject: `New Homepage Contact - ${formData.propertyType}`
-          })
+          body: JSON.stringify(formPayload)
         });
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
         
         const result = await response.json();
         
