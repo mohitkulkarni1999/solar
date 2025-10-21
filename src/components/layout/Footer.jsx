@@ -45,31 +45,31 @@ const Footer = () => {
         <ArrowUp size={24} className="group-hover:animate-bounce" />
       </button>
 
-      <div className="container-custom pt-20 pb-8">
+      <div className="container-custom pt-12 pb-6">
         {/* Logo and Company Description - Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-8 lg:gap-16 mb-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-8 lg:gap-16 mb-8 items-start">
           {/* Left: Logo */}
           <div>
             <Link to="/" className="inline-block group">
               <img 
                 src={logo} 
                 alt="Solarise Corp" 
-                className="h-16 w-auto md:h-20 transition-transform duration-300 group-hover:scale-105"
+                className="h-12 w-auto md:h-14 lg:h-16 transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
           </div>
 
           {/* Right: Description */}
           <div>
-            <h3 className="text-white font-bold text-2xl mb-4">Solarise Corp</h3>
-            <p className="text-gray-400 leading-relaxed text-lg">
+            <h3 className="text-white font-bold text-xl mb-3">Solarise Corp</h3>
+            <p className="text-gray-400 leading-relaxed text-base">
               We believe the future belongs to those who create it — sustainably. Making every rooftop a source of power, pride, and progress. Engineering independence, empowering savings, and lighting up lives, one ray at a time.
             </p>
           </div>
         </div>
 
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
 
           {/* Quick Links */}
           <div>
@@ -138,7 +138,7 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="bg-gradient-to-r from-solar-sky-900/30 to-solar-green-900/30 rounded-2xl p-6 md:p-8 mb-12 border border-gray-800">
+        <div className="bg-gradient-to-r from-solar-sky-900/30 to-solar-green-900/30 rounded-2xl p-6 md:p-8 mb-8 border border-gray-800">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left w-full md:w-auto">
               <h3 className="text-white font-bold text-lg md:text-xl mb-2">
@@ -162,7 +162,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-gray-800 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
             {/* Left: Copyright */}
             <p className="order-2 md:order-1">

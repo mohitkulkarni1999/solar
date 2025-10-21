@@ -6,6 +6,20 @@ const MapSection = ({ showAddress = true, className = '' }) => {
   return (
     <section className={`bg-white ${className}`}>
       <div className="container-custom py-12">
+        {/* Title Section */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-solar-sky-500 to-solar-green-500 text-white rounded-full text-sm font-bold mb-6 shadow-lg">
+            <MapPin size={20} />
+            <span>Find Us</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Visit Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-solar-sky-600 to-solar-green-600">Office</span>
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Come visit us at our office in Nanded. We're here to answer your questions and help you start your solar journey.
+          </p>
+        </div>
+
         {showAddress && (
           <div className="mb-8">
             <div className="flex items-center gap-4 bg-gradient-to-r from-solar-sky-50 to-solar-green-50 px-8 py-6 rounded-2xl w-full">
