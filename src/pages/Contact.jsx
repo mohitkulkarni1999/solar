@@ -116,24 +116,21 @@ const Contact = () => {
       setLoading(true);
       
       try {
-        const formPayload = {
-          access_key: WEB3FORMS_CONFIG.accessKey,
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          property_type: formData.propertyType,
-          message: formData.message,
-          from_name: 'Solarise Corp Contact Form',
-          subject: `New Contact Form Submission - ${formData.propertyType}`
-        };
+        // Use FormData to avoid CORS preflight
+        const formDataPayload = new FormData();
+        formDataPayload.append('access_key', WEB3FORMS_CONFIG.accessKey);
+        formDataPayload.append('name', formData.name);
+        formDataPayload.append('email', formData.email);
+        formDataPayload.append('phone', formData.phone);
+        formDataPayload.append('property_type', formData.propertyType);
+        formDataPayload.append('message', formData.message);
+        formDataPayload.append('from_name', 'Solarise Corp Contact Form');
+        formDataPayload.append('subject', `New Contact Form Submission - ${formData.propertyType}`);
+        formDataPayload.append('botcheck', ''); // Anti-spam field
 
         const response = await fetch(WEB3FORMS_CONFIG.endpoint, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(formPayload)
+          body: formDataPayload
         });
         
         if (!response.ok) {
@@ -161,7 +158,15 @@ const Contact = () => {
         }
       } catch (error) {
         console.error('Form submission error:', error);
-        alert('Failed to send message. Please try again or contact us by phone.');
+        
+        // Fallback to mailto if Web3Forms fails
+        const mailtoLink = `mailto:info@solarise.in?subject=Contact Form - ${formData.propertyType}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AProperty Type: ${formData.propertyType}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+        
+        if (confirm('Unable to submit form automatically. Would you like to send via your email client instead?')) {
+          window.location.href = mailtoLink;
+        } else {
+          alert('Please call us at +91-7972574730 or email info@solarise.in directly.');
+        }
       } finally {
         setLoading(false);
       }
