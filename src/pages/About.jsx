@@ -107,21 +107,6 @@ const About = () => {
                 Our vision is to make every rooftop a source of power, pride, and progress — helping individuals and businesses achieve energy independence while contributing to a cleaner, greener planet.
               </p>
               
-              {/* Quick Stats */}
-              <div className="flex flex-wrap gap-8">
-                <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">100%</div>
-                  <div className="text-sm text-gray-600 font-medium">Commitment</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">24/7</div>
-                  <div className="text-sm text-gray-600 font-medium">Support Available</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">25Yr</div>
-                  <div className="text-sm text-gray-600 font-medium">Panel Warranty</div>
-                </div>
-              </div>
             </div>
             
             {/* Right Side - Visual Element */}
@@ -201,12 +186,12 @@ const About = () => {
           <SectionTitle 
             subtitle="Our Commitment"
             title="What We Offer"
-            description="Quality solar solutions with industry-leading warranties and support"
+            description="Quality solar solutions with comprehensive support and service"
           />
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             <StatCard icon={Users} value="100" suffix="%" label="Customer Satisfaction Goal" color="sky" />
-            <StatCard icon={Briefcase} value="25" suffix=" Yrs" label="Panel Warranty" color="green" />
+            <StatCard icon={Briefcase} value="100" suffix="%" label="Quality Assurance" color="green" />
             <StatCard icon={Award} value="0" suffix="%" label="Down Payment Options" color="sky" />
             <StatCard icon={TrendingUp} value="70" suffix="%" label="Potential Bill Savings" color="green" />
           </div>

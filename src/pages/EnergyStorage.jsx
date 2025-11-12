@@ -33,7 +33,7 @@ const EnergyStorage = () => {
       capacity: '13.5 kWh',
       power: '5 kW continuous',
       price: '₹9,50,000',
-      features: ['Sleek design', 'Weather resistant', 'App monitoring', 'Scalable system', '10-year warranty'],
+      features: ['Sleek design', 'Weather resistant', 'App monitoring', 'Scalable system', '10-year support'],
       icon: '⚡'
     },
     {
@@ -42,7 +42,7 @@ const EnergyStorage = () => {
       power: '7 kW continuous',
       price: '₹11,50,000',
       popular: true,
-      features: ['High capacity', 'Fast charging', 'Compact size', 'Quiet operation', '10-year warranty'],
+      features: ['High capacity', 'Fast charging', 'Compact size', 'Quiet operation', '10-year support'],
       icon: '🔋'
     },
     {
@@ -50,7 +50,7 @@ const EnergyStorage = () => {
       capacity: '10.1 kWh',
       power: '3.84 kW continuous',
       price: '₹8,10,000',
-      features: ['Modular design', 'Easy expansion', 'Integrated inverter', 'Smart management', '15-year warranty'],
+      features: ['Modular design', 'Easy expansion', 'Integrated inverter', 'Smart management', '15-year support'],
       icon: '💡'
     }
   ];

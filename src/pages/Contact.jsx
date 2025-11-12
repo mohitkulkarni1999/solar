@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, FileText, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import Button from '../components/common/Button';
 import Card from '../components/common/Card';
 import SectionTitle from '../components/common/SectionTitle';
@@ -30,23 +30,30 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: 'info@solarise.in',
-      link: 'mailto:info@solarise.in',
+      details: 'info.solarisecorp@gmail.com',
+      link: 'mailto:info.solarisecorp@gmail.com',
       color: 'green'
     },
     {
       icon: MapPin,
       title: 'Office',
-      details: 'Studio 4, Nandi Building, Beside Mangnani Function Hall, Venkatesh Nagar, Hingoli Gate, Nanded – 431602, Maharashtra',
+      details: 'Solarise Corp. Store. 4, Nandi Building Beside Mangnani Function Hall Venkatesh Nagar, Hingoli Gate Nanded – 431602, Maharashtra',
       link: '#',
       color: 'sky'
     },
     {
       icon: Clock,
       title: 'Hours',
-      details: 'Mon-Sat: 8:00 AM - 6:00 PM',
+      details: 'Mon-Sat: 10:30 AM - 7:30 PM',
       link: '#',
       color: 'green'
+    },
+    {
+      icon: FileText,
+      title: 'GST No.',
+      details: '27GHJPK2695M1ZI',
+      link: '#',
+      color: 'sky'
     }
   ];
 
@@ -56,16 +63,12 @@ const Contact = () => {
       answer: 'Most residential installations are completed within 2-3 days. Commercial projects vary based on size.'
     },
     {
-      question: 'What financing options are available?',
-      answer: 'We offer 0% APR financing, solar loans, lease options, and Power Purchase Agreements (PPA).'
-    },
-    {
       question: 'Do you handle permits and paperwork?',
       answer: 'Yes! We handle all permits, inspections, and utility interconnection paperwork for you.'
     },
     {
       question: 'What warranty do you offer?',
-      answer: '25-year panel warranty, 10-year inverter warranty, and 10-year workmanship guarantee.'
+      answer: 'Comprehensive warranty coverage, 10-year inverter warranty, and 10-year workmanship guarantee.'
     }
   ];
 
@@ -160,12 +163,12 @@ const Contact = () => {
         console.error('Form submission error:', error);
         
         // Fallback to mailto if Web3Forms fails
-        const mailtoLink = `mailto:info@solarise.in?subject=Contact Form - ${formData.propertyType}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AProperty Type: ${formData.propertyType}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+        const mailtoLink = `mailto:info.solarisecorp@gmail.com?subject=Contact Form - ${formData.propertyType}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AProperty Type: ${formData.propertyType}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
         
         if (confirm('Unable to submit form automatically. Would you like to send via your email client instead?')) {
           window.location.href = mailtoLink;
         } else {
-          alert('Please call us at +91-7972574730 or email info@solarise.in directly.');
+          alert('Please call us at +91-7972574730 or email info.solarisecorp@gmail.com directly.');
         }
       } finally {
         setLoading(false);
@@ -228,13 +231,13 @@ const Contact = () => {
                   </div>
                 </a>
                 
-                <a href="mailto:info@solarise.in" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
+                <a href="mailto:info.solarisecorp@gmail.com" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="text-white" size={20} />
                   </div>
                   <div>
                     <div className="text-xs text-white/70">Email Us</div>
-                    <div className="font-semibold">info@solarise.in</div>
+                    <div className="font-semibold">info.solarisecorp@gmail.com</div>
                   </div>
                 </a>
               </div>
@@ -249,7 +252,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 text-lg mb-1">Visit Our Office</h3>
-                    <p className="text-gray-600">Studio 4, Nandi Building, Beside Mangnani Function Hall, Venkatesh Nagar, Hingoli Gate, Nanded – 431602, Maharashtra</p>
+                    <p className="text-gray-600">Solarise Corp. Store. 4, Nandi Building Beside Mangnani Function Hall Venkatesh Nagar, Hingoli Gate Nanded – 431602, Maharashtra</p>
                   </div>
                 </div>
               </div>
@@ -261,7 +264,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Business Hours</h3>
-                    <p className="text-white/90">Mon - Sat: 8:00 AM - 6:00 PM<br />Sunday: Closed</p>
+                    <p className="text-white/90">Mon - Sat: 10:30 AM - 7:30 PM<br />Sunday: Closed</p>
                   </div>
                 </div>
               </div>

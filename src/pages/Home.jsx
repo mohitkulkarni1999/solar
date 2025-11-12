@@ -113,12 +113,12 @@ const Home = () => {
         console.error('Form submission error:', error);
         
         // Fallback to mailto if Web3Forms fails
-        const mailtoLink = `mailto:info@solarise.in?subject=Homepage Contact - ${formData.propertyType}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AProperty Type: ${formData.propertyType}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+        const mailtoLink = `mailto:info.solarisecorp@gmail.com?subject=Homepage Contact - ${formData.propertyType}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AProperty Type: ${formData.propertyType}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
         
         if (confirm('Unable to submit form automatically. Would you like to send via your email client instead?')) {
           window.location.href = mailtoLink;
         } else {
-          alert('Please call us at +91-7972574730 or email info@solarise.in directly.');
+          alert('Please call us at +91-7972574730 or email info.solarisecorp@gmail.com directly.');
         }
       } finally {
         setLoading(false);
@@ -130,7 +130,7 @@ const Home = () => {
     {
       icon: Sun,
       title: 'Premium Solar Panels',
-      description: 'High-efficiency solar panels with 25-year warranty and maximum energy output.',
+      description: 'High-efficiency solar panels with maximum energy output and superior performance.',
       color: 'sky'
     },
     {
@@ -158,7 +158,7 @@ const Home = () => {
     'Increase property value by up to 4%',
     'Government tax incentives and rebates',
     'Zero carbon footprint and eco-friendly',
-    '25-year performance warranty',
+    'Comprehensive performance monitoring',
     'Professional maintenance and support'
   ];
 
@@ -170,7 +170,7 @@ const Home = () => {
     },
     {
       title: 'Premium Quality Panels',
-      content: 'Industry-leading solar panels with 25-year warranty. Maximum efficiency, durability, and performance guaranteed for decades.',
+      content: 'Industry-leading solar panels with maximum efficiency, durability, and performance guaranteed for decades.',
       icon: '⚡'
     },
     {
@@ -211,20 +211,6 @@ const Home = () => {
                 <Button variant="outline" icon={Phone} to="/contact">
                   Call Us Today
                 </Button>
-              </div>
-              <div className="flex flex-wrap gap-6 text-sm text-gray-700 font-medium">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="text-solar-green-500" size={20} />
-                  <span>25-Year Warranty</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="text-solar-green-500" size={20} />
-                  <span>Licensed & Insured</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="text-solar-green-500" size={20} />
-                  <span>0% Financing Available</span>
-                </div>
               </div>
             </div>
             

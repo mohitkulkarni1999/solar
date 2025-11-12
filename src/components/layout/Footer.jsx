@@ -23,8 +23,12 @@ const Footer = () => {
 
   const contactInfo = [
     { icon: Phone, text: '+91-7972574730', href: 'tel:+917972574730' },
-    { icon: Mail, text: 'info@solarise.in', href: 'mailto:info@solarise.in' },
-    { icon: MapPin, text: 'Studio 4, Nandi Building, Beside Mangnani Function Hall, Venkatesh Nagar, Hingoli Gate, Nanded – 431602, Maharashtra' },
+    { icon: Mail, text: 'info.solarisecorp@gmail.com', href: 'mailto:info.solarisecorp@gmail.com' },
+    { icon: MapPin, text: 'Solarise Corp. Store. 4, Nandi Building Beside Mangnani Function Hall Venkatesh Nagar, Hingoli Gate Nanded – 431602, Maharashtra' },
+  ];
+
+  const businessInfo = [
+    { label: 'GST No.', value: '27GHJPK2695M1ZI' },
   ];
 
   const socialLinks = [
@@ -134,6 +138,16 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+            
+            {/* Business Information */}
+            <div className="mt-6 pt-4 border-t border-gray-800">
+              {businessInfo.map((info, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <span className="text-solar-sky-400 font-semibold">{info.label}:</span>
+                  <span className="text-gray-400">{info.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

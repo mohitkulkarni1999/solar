@@ -10,7 +10,7 @@ const ResidentialSolar = () => {
     'Federal tax credit up to 30%',
     'State and local incentives available',
     'Protection against rising energy costs',
-    '25-year performance warranty'
+    'Comprehensive performance monitoring'
   ];
 
   const process = [
@@ -26,20 +26,20 @@ const ResidentialSolar = () => {
       name: 'Starter',
       size: '5 kW',
       price: '₹3,50,000',
-      features: ['15-20 solar panels', 'Covers 60% energy needs', 'Basic monitoring', 'Standard warranty']
+      features: ['15-20 solar panels', 'Covers 60% energy needs', 'Basic monitoring', 'Standard support']
     },
     {
       name: 'Complete',
       size: '8 kW',
       price: '₹5,60,000',
       popular: true,
-      features: ['25-32 solar panels', 'Covers 90% energy needs', 'Smart monitoring', 'Extended warranty', 'Battery ready']
+      features: ['25-32 solar panels', 'Covers 90% energy needs', 'Smart monitoring', 'Extended support', 'Battery ready']
     },
     {
       name: 'Premium',
       size: '12 kW',
       price: '₹8,40,000',
-      features: ['38-48 solar panels', '100% energy independence', 'Advanced monitoring', 'Premium warranty', 'Battery included']
+      features: ['38-48 solar panels', '100% energy independence', 'Advanced monitoring', 'Premium support', 'Battery included']
     }
   ];
 

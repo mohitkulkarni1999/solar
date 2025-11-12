@@ -32,9 +32,9 @@ const Header = () => {
         <div className="container-custom">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center gap-6">
-              <a href="mailto:info@solarise.in" className="flex items-center gap-2 hover:text-solar-sky-100 transition">
+              <a href="mailto:info.solarisecorp@gmail.com" className="flex items-center gap-2 hover:text-solar-sky-100 transition">
                 <Mail size={16} />
-                <span>info@solarise.in</span>
+                <span>info.solarisecorp@gmail.com</span>
               </a>
               <a href="tel:+917972574730" className="flex items-center gap-2 hover:text-solar-sky-100 transition">
                 <Phone size={16} />
@@ -42,7 +42,7 @@ const Header = () => {
               </a>
             </div>
             <div className="text-solar-sky-100">
-              Available Monday - Saturday, 8:00 AM - 6:00 PM
+              Available Monday - Saturday, 10:30 AM - 7:30 PM
             </div>
           </div>
         </div>

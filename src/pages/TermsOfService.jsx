@@ -137,7 +137,7 @@ const TermsOfService = () => {
             <Card variant="glass">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Warranties and Guarantees</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Solar panels come with a 25-year performance warranty. Installation workmanship is guaranteed for 10 years. Inverters and other equipment have manufacturer warranties. All warranties are subject to terms and conditions outlined in your service agreement.
+                Solar panels come with comprehensive performance coverage. Installation workmanship is guaranteed for 10 years. Inverters and other equipment have manufacturer coverage. All coverage is subject to terms and conditions outlined in your service agreement.
               </p>
             </Card>
 

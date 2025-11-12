@@ -49,7 +49,7 @@ const Projects = () => {
       savings: 'Up to 65%',
       image: '🏠',
       description: 'Energy-efficient solar solutions with modern aesthetics perfect for any home.',
-      features: ['Premium panels', 'App control', '25-year warranty']
+      features: ['Premium panels', 'App control', 'Professional support']
     },
     {
       id: 4,
@@ -131,7 +131,7 @@ const Projects = () => {
 
   const stats = [
     { icon: Award, value: '9+', label: 'Service Options' },
-    { icon: Zap, value: '25Yr', label: 'Panel Warranty' },
+    { icon: Zap, value: '24/7', label: 'Monitoring' },
     { icon: TrendingUp, value: '70%', label: 'Potential Savings' },
     { icon: Home, value: '0%', label: 'Down Payment Plans' }
   ];
@@ -161,8 +161,8 @@ const Projects = () => {
                 {/* Quick Stats */}
                 <div className="flex flex-wrap gap-6">
                   <div className="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
-                    <div className="text-3xl font-bold">25 Yr</div>
-                    <div className="text-sm text-white/80">Warranty</div>
+                    <div className="text-3xl font-bold">24/7</div>
+                    <div className="text-sm text-white/80">Support</div>
                   </div>
                   <div className="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-4">
                     <div className="text-3xl font-bold">70%</div>
