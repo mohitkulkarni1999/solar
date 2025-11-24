@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
-import logo from '../../assets/logo/footerlogo.png';
+import logo from '../../assets/logo/Gemini_Generated_Image_c01elic01elic01e-Photoroom.png';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -58,7 +58,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Solarise Corp" 
-                className="h-12 w-auto md:h-14 lg:h-16 transition-transform duration-300 group-hover:scale-105"
+                className="h-10 w-auto md:h-12 lg:h-14 transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
           </div>
