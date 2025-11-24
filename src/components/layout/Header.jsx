@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail } from 'lucide-react';
-import logo from '../../assets/logo/logo.png';
+import logo from '../../assets/logo/IMG_1786-Photoroom.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,7 +63,7 @@ const Header = () => {
               <img 
                 src={logo} 
                 alt="Solarise Corp" 
-                className="h-12 w-auto md:h-14 lg:h-16 transition-transform duration-300 group-hover:scale-105"
+                className="h-10 w-auto md:h-12 lg:h-14 transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
 
