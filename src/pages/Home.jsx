@@ -8,6 +8,10 @@ import MapSection from '../components/common/MapSection';
 import { WEB3FORMS_CONFIG } from '../config/forms';
 import bannerImage from '../assets/Gemini_Generated_Image_3yjrdy3yjrdy3yjr.png';
 import bgImage from '../assets/Gemini_Generated_Image_un29ilun29ilun29.png';
+import premiumPanelsImg from '../assets/premium_solar_panels.png';
+import expertInstallImg from '../assets/expert_installation.png';
+import bestServiceImg from '../assets/best_in_class_service.png';
+import maxSavingsImg from '../assets/maximum_savings.png';
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -21,28 +25,29 @@ const Home = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
+  const [activeFeature, setActiveFeature] = useState(0);
 
   const validateForm = () => {
     const newErrors = {};
-    
+
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     }
-    
+
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
-    
+
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone is required';
     }
-    
+
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -64,10 +69,10 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
       setLoading(true);
-      
+
       try {
         // Use FormData to avoid CORS preflight
         const formDataPayload = new FormData();
@@ -85,16 +90,16 @@ const Home = () => {
           method: 'POST',
           body: formDataPayload
         });
-        
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const result = await response.json();
-        
+
         if (result.success) {
           setSubmitted(true);
-          
+
           // Reset form after 5 seconds
           setTimeout(() => {
             setSubmitted(false);
@@ -111,10 +116,10 @@ const Home = () => {
         }
       } catch (error) {
         console.error('Form submission error:', error);
-        
+
         // Fallback to mailto if Web3Forms fails
         const mailtoLink = `mailto:info.solarisecorp@gmail.com?subject=Homepage Contact - ${formData.propertyType}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AProperty Type: ${formData.propertyType}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-        
+
         if (confirm('Unable to submit form automatically. Would you like to send via your email client instead?')) {
           window.location.href = mailtoLink;
         } else {
@@ -131,25 +136,29 @@ const Home = () => {
       icon: Sun,
       title: 'Premium Solar Panels',
       description: 'High-efficiency solar panels with maximum energy output and superior performance.',
-      color: 'sky'
+      color: 'sky',
+      image: premiumPanelsImg
     },
     {
       icon: Zap,
       title: 'Expert Installation',
       description: 'Certified professionals ensuring safe, efficient, and compliant installations.',
-      color: 'green'
+      color: 'green',
+      image: expertInstallImg
     },
     {
       icon: Award,
       title: 'Best-in-Class Service',
       description: 'Award-winning customer service and comprehensive maintenance support.',
-      color: 'sky'
+      color: 'sky',
+      image: bestServiceImg
     },
     {
       icon: TrendingUp,
       title: 'Maximum Savings',
       description: 'Reduce your energy bills by up to 70% with our optimized solar solutions.',
-      color: 'green'
+      color: 'green',
+      image: maxSavingsImg
     }
   ];
 
@@ -213,14 +222,14 @@ const Home = () => {
                 </Button>
               </div>
             </div>
-            
+
             <div className="relative animate-float">
               <div className="absolute -top-4 -right-4 w-72 h-72 bg-solar-sky-200 rounded-full blur-3xl opacity-50"></div>
               <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-solar-green-200 rounded-full blur-3xl opacity-50"></div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img 
-                  src={bannerImage} 
-                  alt="Solar Panel Installation" 
+                <img
+                  src={bannerImage}
+                  alt="Solar Panel Installation"
                   className="w-full h-full object-cover rounded-3xl"
                 />
               </div>
@@ -234,52 +243,79 @@ const Home = () => {
         {/* Decorative Background */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-solar-sky-50 to-transparent opacity-50"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-solar-green-50 to-transparent opacity-50"></div>
-        
+
         <div className="container-custom relative z-10">
-          <SectionTitle 
+          <SectionTitle
             subtitle="Why Choose Us"
             title="Premium Solar Solutions"
             description="Industry-leading technology and expertise to maximize your solar investment"
           />
-          
-          <div className="grid md:grid-cols-2 gap-8 mt-16">
+
+          <div className="flex flex-col lg:flex-row h-[800px] lg:h-[600px] gap-4 mt-16">
             {features.map((feature, index) => (
-              <div 
-                key={index} 
-                className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-transparent overflow-hidden"
+              <div
+                key={index}
+                onClick={() => setActiveFeature(index)}
+                className={`relative rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] ${activeFeature === index ? 'flex-[3]' : 'flex-[1]'
+                  }`}
               >
-                {/* Animated Gradient Background on Hover */}
-                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
-                  feature.color === 'sky' 
-                    ? 'bg-gradient-to-br from-solar-sky-50 via-white to-solar-sky-100' 
-                    : 'bg-gradient-to-br from-solar-green-50 via-white to-solar-green-100'
-                }`}></div>
-                
-                <div className="relative z-10 flex items-start gap-6">
-                  {/* Icon with Animation */}
-                  <div className={`flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 ${
-                    feature.color === 'sky' 
-                      ? 'bg-gradient-to-br from-solar-sky-400 to-solar-sky-600 shadow-lg shadow-solar-sky-200' 
-                      : 'bg-gradient-to-br from-solar-green-400 to-solar-green-600 shadow-lg shadow-solar-green-200'
-                  }`}>
-                    <feature.icon className="text-white" size={32} />
+                {/* Background Image */}
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  className={`absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ${activeFeature === index ? 'scale-100' : 'scale-110'
+                    }`}
+                />
+
+                {/* Gradient Overlay */}
+                <div className={`absolute inset-0 transition-colors duration-500 ${activeFeature === index
+                  ? 'bg-gradient-to-t from-black/80 via-black/20 to-transparent'
+                  : 'bg-black/40 hover:bg-black/20'
+                  }`}></div>
+
+                {/* Content Container */}
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  {/* Icon */}
+                  <div className={`transition-all duration-500 ${activeFeature === index
+                    ? 'mb-auto translate-y-0 opacity-100'
+                    : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 opacity-80'
+                    }`}>
+                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/20 shadow-lg ${feature.color === 'sky'
+                      ? 'bg-solar-sky-500/90 text-white'
+                      : 'bg-solar-green-500/90 text-white'
+                      }`}>
+                      <feature.icon size={28} />
+                    </div>
                   </div>
-                  
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-solar-sky-600 group-hover:to-solar-green-600 transition-all duration-300">
+
+                  {/* Text Content */}
+                  <div className={`transition-all duration-500 transform ${activeFeature === index
+                    ? 'translate-y-0 opacity-100 delay-100'
+                    : 'translate-y-8 opacity-0 absolute bottom-6 left-6 right-6'
+                    }`}>
+                    <h3 className="text-3xl font-bold text-white mb-3 leading-tight">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed text-base">
+                    <p className="text-gray-200 text-lg leading-relaxed max-w-xl">
                       {feature.description}
                     </p>
                   </div>
+
+                  {/* Vertical Title for Inactive State (Desktop only) */}
+                  {activeFeature !== index && (
+                    <div className="hidden lg:block absolute bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                      <p className="text-white font-bold text-lg tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {/* Optional: Add text here if we want labels on inactive cards */}
+                      </p>
+                    </div>
+                  )}
                 </div>
-                
-                {/* Decorative Corner Element */}
-                <div className={`absolute -bottom-4 -right-4 w-24 h-24 rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 ${
-                  feature.color === 'sky' ? 'bg-solar-sky-400' : 'bg-solar-green-400'
-                }`}></div>
+
+                {/* Active Indicator Border */}
+                <div className={`absolute inset-0 border-2 rounded-3xl transition-opacity duration-500 pointer-events-none ${activeFeature === index
+                  ? `opacity-100 ${feature.color === 'sky' ? 'border-solar-sky-400/50' : 'border-solar-green-400/50'}`
+                  : 'opacity-0 border-transparent'
+                  }`}></div>
               </div>
             ))}
           </div>
@@ -294,23 +330,23 @@ const Home = () => {
               <span className="text-2xl">💡</span>
               <span>The Smarter Way to Save</span>
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Every sunrise brings a chance to{' '}
               <span className="bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">
                 save smart
               </span>
             </h2>
-            
+
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
               Yet every month without solar is money quietly leaving your pocket.
             </p>
-            
+
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100 mb-8">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 It's not an expense — <span className="font-bold text-solar-sky-600">it's the smartest investment you can make</span> for your home, your wallet, and the planet.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6 text-left">
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -328,7 +364,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="text-solar-green-500 flex-shrink-0 mt-1" size={24} />
@@ -347,7 +383,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            
+
             <p className="text-lg text-gray-700 italic">
               Each panel offsets as much carbon as planting 100 trees, making every unit of energy <span className="font-bold">clean, personal, and profitable</span>.
             </p>
@@ -373,9 +409,9 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            
+
             <div>
-              <SectionTitle 
+              <SectionTitle
                 subtitle="Investment Benefits"
                 title="Why Switch to Solar Energy?"
                 description="Solar energy is more than just an eco-friendly choice—it's a smart financial decision that pays dividends for years to come."
@@ -394,12 +430,12 @@ const Home = () => {
       {/* Why Choose Us Section */}
       <section className="bg-gradient-to-br from-solar-sky-50 to-solar-green-50 section-padding">
         <div className="container-custom">
-          <SectionTitle 
+          <SectionTitle
             subtitle="Why Choose Us"
             title="Your Trusted Solar Partner"
             description="Comprehensive solar solutions designed for your success"
           />
-          
+
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             {whyChooseUs.map((item, index) => (
               <Card key={index} variant="glass">
@@ -450,7 +486,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Contact Form - Left Side */}
             <div>
-              <SectionTitle 
+              <SectionTitle
                 subtitle="Send Us a Message"
                 title="Request Free Consultation"
                 description="Fill out the form and we'll get back to you within 24 hours"
@@ -486,80 +522,80 @@ const Home = () => {
                     {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                   </div>
 
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-gray-700 font-semibold mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all`}
-                      placeholder="john@example.com"
-                    />
-                    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-gray-700 font-semibold mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`w-full px-4 py-3 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all`}
+                        placeholder="john@example.com"
+                      />
+                      {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                    </div>
+
+                    <div>
+                      <label className="block text-gray-700 font-semibold mb-2">
+                        Phone Number *
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className={`w-full px-4 py-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all`}
+                        placeholder="+91-7972574730"
+                      />
+                      {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+                    </div>
                   </div>
 
                   <div>
                     <label className="block text-gray-700 font-semibold mb-2">
-                      Phone Number *
+                      Property Type
                     </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
+                    <select
+                      name="propertyType"
+                      value={formData.propertyType}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all`}
-                      placeholder="+91-7972574730"
-                    />
-                    {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all"
+                    >
+                      <option value="residential">Residential</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="industrial">Industrial</option>
+                    </select>
                   </div>
-                </div>
 
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">
-                    Property Type
-                  </label>
-                  <select
-                    name="propertyType"
-                    value={formData.propertyType}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all"
+                  <div>
+                    <label className="block text-gray-700 font-semibold mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows="5"
+                      className={`w-full px-4 py-3 rounded-lg border ${errors.message ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all resize-none`}
+                      placeholder="Tell us about your project..."
+                    ></textarea>
+                    {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+                  </div>
+
+                  <Button
+                    variant="secondary"
+                    icon={Send}
+                    type="submit"
+                    fullWidth
+                    size="lg"
+                    disabled={loading}
                   >
-                    <option value="residential">Residential</option>
-                    <option value="commercial">Commercial</option>
-                    <option value="industrial">Industrial</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows="5"
-                    className={`w-full px-4 py-3 rounded-lg border ${errors.message ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-solar-sky-500 transition-all resize-none`}
-                    placeholder="Tell us about your project..."
-                  ></textarea>
-                  {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
-                </div>
-
-                <Button 
-                  variant="secondary" 
-                  icon={Send}
-                  type="submit"
-                  fullWidth
-                  size="lg"
-                  disabled={loading}
-                >
-                  {loading ? 'Sending...' : 'Send Message'}
-                </Button>
-              </form>
+                    {loading ? 'Sending...' : 'Send Message'}
+                  </Button>
+                </form>
               )}
             </div>
 
