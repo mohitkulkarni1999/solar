@@ -25,7 +25,7 @@ const Home = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
-  const [activeFeature, setActiveFeature] = useState(0);
+  const [expandedIndex, setExpandedIndex] = useState(0);
 
   const validateForm = () => {
     const newErrors = {};
@@ -255,20 +255,20 @@ const Home = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                onClick={() => setActiveFeature(index)}
-                className={`relative rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] ${activeFeature === index ? 'flex-[3]' : 'flex-[1]'
+                onClick={() => setExpandedIndex(index)}
+                className={`relative rounded-3xl overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] ${expandedIndex === index ? 'flex-[3]' : 'flex-[1]'
                   }`}
               >
                 {/* Background Image */}
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className={`absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ${activeFeature === index ? 'scale-100' : 'scale-110'
+                  className={`absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ${expandedIndex === index ? 'scale-100' : 'scale-110'
                     }`}
                 />
 
                 {/* Gradient Overlay */}
-                <div className={`absolute inset-0 transition-colors duration-500 ${activeFeature === index
+                <div className={`absolute inset-0 transition-colors duration-500 ${expandedIndex === index
                   ? 'bg-gradient-to-t from-black/80 via-black/20 to-transparent'
                   : 'bg-black/40 hover:bg-black/20'
                   }`}></div>
@@ -276,7 +276,7 @@ const Home = () => {
                 {/* Content Container */}
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
                   {/* Icon */}
-                  <div className={`transition-all duration-500 ${activeFeature === index
+                  <div className={`transition-all duration-500 ${expandedIndex === index
                     ? 'mb-auto translate-y-0 opacity-100'
                     : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 opacity-80'
                     }`}>
@@ -289,7 +289,7 @@ const Home = () => {
                   </div>
 
                   {/* Text Content */}
-                  <div className={`transition-all duration-500 transform ${activeFeature === index
+                  <div className={`transition-all duration-500 transform ${expandedIndex === index
                     ? 'translate-y-0 opacity-100 delay-100'
                     : 'translate-y-8 opacity-0 absolute bottom-6 left-6 right-6'
                     }`}>
@@ -302,7 +302,7 @@ const Home = () => {
                   </div>
 
                   {/* Vertical Title for Inactive State (Desktop only) */}
-                  {activeFeature !== index && (
+                  {expandedIndex !== index && (
                     <div className="hidden lg:block absolute bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap">
                       <p className="text-white font-bold text-lg tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {/* Optional: Add text here if we want labels on inactive cards */}
@@ -312,7 +312,7 @@ const Home = () => {
                 </div>
 
                 {/* Active Indicator Border */}
-                <div className={`absolute inset-0 border-2 rounded-3xl transition-opacity duration-500 pointer-events-none ${activeFeature === index
+                <div className={`absolute inset-0 border-2 rounded-3xl transition-opacity duration-500 pointer-events-none ${expandedIndex === index
                   ? `opacity-100 ${feature.color === 'sky' ? 'border-solar-sky-400/50' : 'border-solar-green-400/50'}`
                   : 'opacity-0 border-transparent'
                   }`}></div>
