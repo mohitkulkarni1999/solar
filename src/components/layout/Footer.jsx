@@ -27,9 +27,7 @@ const Footer = () => {
     { icon: MapPin, text: 'Solarise Corp. Store. 4, Nandi Building Beside Mangnani Function Hall Venkatesh Nagar, Hingoli Gate Nanded – 431602, Maharashtra' },
   ];
 
-  const businessInfo = [
-    { label: 'GST No.', value: '27GHJPK2695M1ZI' },
-  ];
+  const businessInfo = [];
 
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },

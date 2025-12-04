@@ -48,13 +48,7 @@ const Contact = () => {
       link: '#',
       color: 'green'
     },
-    {
-      icon: FileText,
-      title: 'GST No.',
-      details: '27GHJPK2695M1ZI',
-      link: '#',
-      color: 'sky'
-    }
+
   ];
 
   const faqs = [
@@ -74,25 +68,25 @@ const Contact = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    
+
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     }
-    
+
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
-    
+
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone is required';
     }
-    
+
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -114,10 +108,10 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
       setLoading(true);
-      
+
       try {
         // Use FormData to avoid CORS preflight
         const formDataPayload = new FormData();
@@ -135,16 +129,16 @@ const Contact = () => {
           method: 'POST',
           body: formDataPayload
         });
-        
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const result = await response.json();
-        
+
         if (result.success) {
           setSubmitted(true);
-          
+
           // Reset form after 5 seconds
           setTimeout(() => {
             setSubmitted(false);
@@ -161,10 +155,10 @@ const Contact = () => {
         }
       } catch (error) {
         console.error('Form submission error:', error);
-        
+
         // Fallback to mailto if Web3Forms fails
         const mailtoLink = `mailto:info.solarisecorp@gmail.com?subject=Contact Form - ${formData.propertyType}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AProperty Type: ${formData.propertyType}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-        
+
         if (confirm('Unable to submit form automatically. Would you like to send via your email client instead?')) {
           window.location.href = mailtoLink;
         } else {
@@ -194,7 +188,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="container-custom relative z-10 py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -218,7 +212,7 @@ const Contact = () => {
               <p className="text-lg text-white/80 mb-8 max-w-lg leading-relaxed">
                 Let our experts design a system tailored to your home, your goals, and your savings.
               </p>
-              
+
               {/* Quick Contact Bubbles */}
               <div className="flex flex-wrap gap-4">
                 <a href="tel:+917972574730" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
@@ -230,7 +224,7 @@ const Contact = () => {
                     <div className="font-semibold">+91-7972574730</div>
                   </div>
                 </a>
-                
+
                 <a href="mailto:info.solarisecorp@gmail.com" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300 group">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="text-white" size={20} />
@@ -242,7 +236,7 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-            
+
             {/* Right Side - Contact Cards */}
             <div className="space-y-4">
               <div className="bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 border border-gray-100">
@@ -256,7 +250,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-gradient-to-br from-solar-green-500 to-solar-green-600 rounded-3xl p-8 shadow-2xl text-white hover:shadow-3xl transition-all duration-300">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -268,7 +262,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 shadow-2xl text-white hover:shadow-3xl transition-all duration-300">
                 <div className="flex items-center justify-between">
                   <div>
@@ -316,7 +310,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <SectionTitle 
+              <SectionTitle
                 subtitle="Send Us a Message"
                 title="Request Free Consultation"
                 description="Fill out the form and we'll get back to you within 24 hours"
@@ -415,8 +409,8 @@ const Contact = () => {
                     {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                   </div>
 
-                  <Button 
-                    variant="secondary" 
+                  <Button
+                    variant="secondary"
                     icon={Send}
                     type="submit"
                     fullWidth
@@ -431,7 +425,7 @@ const Contact = () => {
 
             {/* FAQs & Additional Info */}
             <div>
-              <SectionTitle 
+              <SectionTitle
                 subtitle="Frequently Asked"
                 title="Common Questions"
                 description="Quick answers to questions you may have"
