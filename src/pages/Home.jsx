@@ -12,6 +12,9 @@ import premiumPanelsImg from '../assets/premium_solar_panels.png';
 import expertInstallImg from '../assets/expert_installation.png';
 import bestServiceImg from '../assets/best_in_class_service.png';
 import maxSavingsImg from '../assets/maximum_savings.png';
+import endToEndImg from '../assets/end_to_end_solutions.png';
+import premiumQualityImg from '../assets/premium_quality_panels.png';
+import expertTeamImg from '../assets/expert_team_support.png';
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -175,17 +178,23 @@ const Home = () => {
     {
       title: 'End-to-End Solar Solutions',
       content: 'From initial consultation to installation and maintenance, we handle everything. Complete EPC services including permits, subsidies, and financing assistance.',
-      icon: '🔧'
+      icon: '🔧',
+      image: endToEndImg,
+      gradient: 'from-blue-600 to-cyan-500'
     },
     {
       title: 'Premium Quality Panels',
       content: 'Industry-leading solar panels with maximum efficiency, durability, and performance guaranteed for decades.',
-      icon: '⚡'
+      icon: '⚡',
+      image: premiumQualityImg,
+      gradient: 'from-amber-500 to-orange-600'
     },
     {
       title: 'Expert Team & Support',
       content: 'Certified professionals with deep expertise in solar technology. 24/7 monitoring and maintenance support to keep your system running perfectly.',
-      icon: '👥'
+      icon: '👥',
+      image: expertTeamImg,
+      gradient: 'from-emerald-500 to-teal-600'
     }
   ];
 
@@ -404,25 +413,92 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="bg-gradient-to-br from-solar-sky-50 to-solar-green-50 section-padding">
-        <div className="container-custom">
-          <SectionTitle
-            subtitle="Why Choose Us"
-            title="Your Trusted Solar Partner"
-            description="Comprehensive solar solutions designed for your success"
-          />
+      {/* Why Choose Us Section - Redesigned */}
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black section-padding overflow-hidden">
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
+        <div className="container-custom relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-solar-sky-500 to-solar-green-500 text-white rounded-full text-sm font-bold mb-6 shadow-lg">
+              <span className="text-2xl">✨</span>
+              <span>Why Choose Us</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Your Trusted Solar Partner
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive solar solutions designed for your success
+            </p>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid lg:grid-cols-3 gap-8 mt-16">
             {whyChooseUs.map((item, index) => (
-              <Card key={index} variant="glass">
-                <div className="text-5xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {item.content}
-                </p>
-              </Card>
+              <div
+                key={index}
+                className="group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 hover:scale-105 hover:shadow-2xl"
+              >
+                {/* Background Image with Parallax Effect */}
+                <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Dark Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
+                  {/* Colored Gradient Overlay on Hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-30 transition-opacity duration-700`}></div>
+                </div>
+
+                {/* Content */}
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  {/* Icon Badge */}
+                  <div className="mb-6 transform transition-all duration-500 group-hover:-translate-y-2">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-xl">
+                      <span className="text-4xl">{item.icon}</span>
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight transform transition-all duration-500 group-hover:-translate-y-2">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-200 text-base md:text-lg leading-relaxed mb-6 transform transition-all duration-500 group-hover:-translate-y-2">
+                    {item.content}
+                  </p>
+
+                  {/* Decorative Line */}
+                  <div className="w-0 h-1 bg-gradient-to-r from-white to-transparent group-hover:w-full transition-all duration-700 rounded-full"></div>
+                </div>
+
+                {/* Border Glow Effect */}
+                <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`}
+                  style={{
+                    boxShadow: '0 0 30px rgba(56, 189, 248, 0.5), inset 0 0 30px rgba(56, 189, 248, 0.1)'
+                  }}
+                ></div>
+              </div>
             ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-16">
+            <p className="text-gray-400 text-lg mb-6">
+              Join thousands of satisfied customers who've made the switch to solar
+            </p>
+            <Button variant="white" icon={ArrowRight} to="/contact">
+              Start Your Solar Journey
+            </Button>
           </div>
         </div>
       </section>
