@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Target, Eye, Award, Users, Briefcase, Shield, TrendingUp, Heart, ArrowRight } from 'lucide-react';
 import SectionTitle from '../components/common/SectionTitle';
 import Card from '../components/common/Card';
@@ -41,32 +41,32 @@ const About = () => {
       name: 'Leadership Team',
       role: 'Strategic Direction',
       description: 'Expert guidance in renewable energy',
-      image: '👨‍💼'
+      image: 'ðŸ‘¨â€ðŸ’¼'
     },
     {
       name: 'Technical Team',
       role: 'Solar Engineering',
       description: 'Cutting-edge solar technology expertise',
-      image: '👩‍💻'
+      image: 'ðŸ‘©â€ðŸ’»'
     },
     {
       name: 'Installation Team',
       role: 'Field Operations',
       description: 'Professional installation excellence',
-      image: '👨‍🔧'
+      image: 'ðŸ‘¨â€ðŸ”§'
     },
     {
       name: 'Support Team',
       role: 'Customer Success',
       description: 'Dedicated to your satisfaction',
-      image: '👩‍💼'
+      image: 'ðŸ‘©â€ðŸ’¼'
     }
   ];
 
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section */}
+      {/* Hero Section - Unique Timeline Design */}
       <section className="relative bg-white section-padding overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
@@ -100,14 +100,14 @@ const About = () => {
                 </span>
               </h1>
               <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-solar-sky-500 to-solar-green-500 text-white rounded-full text-sm font-bold mb-6 shadow-lg">
-                <span className="text-2xl">🏢</span>
+                <span className="text-2xl">ðŸ¢</span>
                 <span>About Us</span>
               </div>
               <p className="text-xl text-gray-600 leading-relaxed mb-4">
-                At Solarise Corp, we believe the future belongs to those who create it — sustainably.
+                At Solarise Corp, we believe the future belongs to those who create it â€” sustainably.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Our vision is to make every rooftop a source of power, pride, and progress — helping individuals and businesses achieve energy independence while contributing to a cleaner, greener planet.
+                Our vision is to make every rooftop a source of power, pride, and progress â€” helping individuals and businesses achieve energy independence while contributing to a cleaner, greener planet.
               </p>
 
             </div>
@@ -130,113 +130,68 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision - Alternating Layout */}
-      <section className="bg-white section-padding">
-        <div className="container-custom space-y-24">
-
-          {/* Mission - Image Left, Text Right */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image */}
-            <div className="relative group order-1">
-              <div className="absolute -inset-4 bg-gradient-to-br from-solar-sky-400 to-solar-sky-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white">
+      {/* Mission & Vision - Redesigned with Images */}
+      <section className="bg-gradient-to-br from-gray-50 to-white section-padding">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Mission Card with Image */}
+            <div className="group relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+              {/* Background Image */}
+              <div className="absolute inset-0">
                 <img
                   src={aboutMissionImg}
                   alt="Our Mission - Complete Solar Solutions"
-                  className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-solar-sky-900/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-solar-sky-600/75 to-solar-sky-800/85"></div>
               </div>
-            </div>
 
-            {/* Text Content */}
-            <div className="order-2">
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-solar-sky-500 to-solar-sky-600 text-white rounded-full text-sm font-bold mb-6 shadow-lg">
-                <Target size={20} />
-                <span>Our Mission</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Complete End-to-End{' '}
-                <span className="bg-gradient-to-r from-solar-sky-600 to-solar-sky-700 bg-clip-text text-transparent">
-                  Solar Solutions
-                </span>
-              </h2>
-              <div className="space-y-4">
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  As a trusted Solar EPC (Engineering, Procurement & Construction) company, Solarise Corp offers complete end-to-end solar solutions — making clean energy simple, reliable, and rewarding for everyone.
+              {/* Content */}
+              <div className="relative p-8 lg:p-10 text-white min-h-[500px] flex flex-col">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
+                    <Target className="text-white" size={32} />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold">Our Mission</h2>
+                </div>
+                <p className="text-white/95 text-lg leading-relaxed mb-4">
+                  As a trusted Solar EPC (Engineering, Procurement & Construction) company, Solarise Corp offers complete end-to-end solar solutions â€” making clean energy simple, reliable, and rewarding for everyone.
                 </p>
-                <p className="text-gray-600 text-base leading-relaxed">
+                <p className="text-white/90 text-base leading-relaxed">
                   From site inspection, system design, and panel selection to installation, subsidy assistance, and regulatory permits, our team ensures a smooth and transparent experience. We also provide financing and loan assistance, helping customers switch to solar with ease and confidence.
                 </p>
               </div>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <div className="flex items-center gap-2 text-solar-sky-600">
-                  <div className="w-2 h-2 bg-solar-sky-600 rounded-full"></div>
-                  <span className="font-semibold">Site Inspection</span>
-                </div>
-                <div className="flex items-center gap-2 text-solar-sky-600">
-                  <div className="w-2 h-2 bg-solar-sky-600 rounded-full"></div>
-                  <span className="font-semibold">System Design</span>
-                </div>
-                <div className="flex items-center gap-2 text-solar-sky-600">
-                  <div className="w-2 h-2 bg-solar-sky-600 rounded-full"></div>
-                  <span className="font-semibold">Financing Support</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Vision - Text Left, Image Right */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div className="order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-solar-green-500 to-solar-green-600 text-white rounded-full text-sm font-bold mb-6 shadow-lg">
-                <Eye size={20} />
-                <span>Our Vision</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Long-term Excellence &{' '}
-                <span className="bg-gradient-to-r from-solar-green-600 to-solar-green-700 bg-clip-text text-transparent">
-                  Support
-                </span>
-              </h2>
-              <div className="space-y-4">
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  Our services go beyond installation — we deliver long-term maintenance, performance monitoring, and surveillance support to keep every system running efficiently for decades.
-                </p>
-                <p className="text-gray-600 text-base leading-relaxed">
-                  At Solarise, we merge innovation with integrity — turning rooftops into self-sustaining assets and homes into long-term sources of savings. Because we don't just install solar panels — we engineer independence, empower savings, and light up lives, one ray at a time.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <div className="flex items-center gap-2 text-solar-green-600">
-                  <div className="w-2 h-2 bg-solar-green-600 rounded-full"></div>
-                  <span className="font-semibold">24/7 Monitoring</span>
-                </div>
-                <div className="flex items-center gap-2 text-solar-green-600">
-                  <div className="w-2 h-2 bg-solar-green-600 rounded-full"></div>
-                  <span className="font-semibold">Maintenance</span>
-                </div>
-                <div className="flex items-center gap-2 text-solar-green-600">
-                  <div className="w-2 h-2 bg-solar-green-600 rounded-full"></div>
-                  <span className="font-semibold">Long-term Support</span>
-                </div>
-              </div>
             </div>
 
-            <div className="relative group order-1 lg:order-2">
-              <div className="absolute -inset-4 bg-gradient-to-br from-solar-green-400 to-solar-green-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white">
+            {/* Vision Card with Image */}
+            <div className="group relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+              {/* Background Image */}
+              <div className="absolute inset-0">
                 <img
                   src={aboutVisionImg}
                   alt="Our Vision - Long-term Excellence"
-                  className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-solar-green-900/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-solar-green-600/75 to-solar-green-800/85"></div>
+              </div>
+
+              {/* Content */}
+              <div className="relative p-8 lg:p-10 text-white min-h-[500px] flex flex-col">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
+                    <Eye className="text-white" size={32} />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold">Our Vision</h2>
+                </div>
+                <p className="text-white/95 text-lg leading-relaxed mb-4">
+                  Our services go beyond installation â€” we deliver long-term maintenance, performance monitoring, and surveillance support to keep every system running efficiently for decades.
+                </p>
+                <p className="text-white/90 text-base leading-relaxed">
+                  At Solarise, we merge innovation with integrity â€” turning rooftops into self-sustaining assets and homes into long-term sources of savings. Because we don't just install solar panels â€” we engineer independence, empower savings, and light up lives, one ray at a time.
+                </p>
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -370,7 +325,7 @@ const About = () => {
               <div className="absolute inset-0 bg-white/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white text-3xl font-bold shadow-lg">
-                  ⚡
+                  âš¡
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Enjoy Clean Energy</h3>
                 <p className="text-white/90 leading-relaxed">
