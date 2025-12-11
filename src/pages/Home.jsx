@@ -6,8 +6,9 @@ import StatCard from '../components/common/StatCard';
 import SectionTitle from '../components/common/SectionTitle';
 import MapSection from '../components/common/MapSection';
 import { WEB3FORMS_CONFIG } from '../config/forms';
-import bannerImage from '../assets/Gemini_Generated_Image_3yjrdy3yjrdy3yjr.png';
+
 import bgImage from '../assets/Gemini_Generated_Image_un29ilun29ilun29.png';
+import solarHeroImg from '../assets/solar_hero_background.jpg';
 import premiumPanelsImg from '../assets/premium_solar_panels.png';
 import expertInstallImg from '../assets/expert_installation.png';
 import bestServiceImg from '../assets/best_in_class_service.png';
@@ -210,10 +211,6 @@ const Home = () => {
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-4xl">🌞</span>
-                <h2 className="text-2xl font-bold text-gray-900">Solarise Corp</h2>
-              </div>
               <h1 className="heading-xl text-gray-900 mb-6">
                 <span className="bg-gradient-to-r from-solar-sky-600 to-solar-green-600 bg-clip-text text-transparent">
                   Shaping Tomorrow, One Ray at a Time.
@@ -237,9 +234,15 @@ const Home = () => {
               <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-solar-green-200 rounded-full blur-3xl opacity-50"></div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src={bannerImage}
+                  src={solarHeroImg}
                   alt="Solar Panel Installation"
                   className="w-full h-full object-cover rounded-3xl"
+                  style={{
+                    maskImage: 'linear-gradient(to top, transparent 0%, black 15%, black 100%), linear-gradient(to left, transparent 0%, black 15%, black 100%)',
+                    maskComposite: 'intersect',
+                    WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%, black 100%), linear-gradient(to left, transparent 0%, black 15%, black 100%)',
+                    WebkitMaskComposite: 'source-in'
+                  }}
                 />
               </div>
             </div>
