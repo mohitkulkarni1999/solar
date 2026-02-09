@@ -3,7 +3,7 @@
 // IMPORTANT: Replace this with your actual access key
 
 export const WEB3FORMS_CONFIG = {
-  accessKey: 'd290924d-4cb2-487c-8614-3c8e9accff35', // Your Web3Forms access key
+  accessKey: '0c89ee25-f6f5-4109-bbcc-5d374a1b1192', // Your Web3Forms access key
   endpoint: 'https://api.web3forms.com/submit'
 };
 
